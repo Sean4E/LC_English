@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="theme-color" content="#0a0e14">
-    <meta name="description" content="EnglishMaster LC - Interactive English Chemistry study app with flashcards, quizzes, periodic table, and more.">
+    <meta name="description" content="EnglishMaster LC - Interactive Irish Leaving Certificate English study app with flashcards, quizzes, literary terms, and more.">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="EnglishMaster LC">
@@ -636,13 +636,13 @@
             <nav class="nav">
                 <button class="nav-btn active" data-section="dashboard"><span class="icon">📊</span><span>Dashboard</span></button>
                 <button class="nav-btn" data-section="topics"><span class="icon">📚</span><span>Topics</span></button>
-                <button class="nav-btn" data-section="periodic"><span class="icon">⚛️</span><span>Periodic Table</span></button>
+                <button class="nav-btn" data-section="periodic"><span class="icon">📜</span><span>Literary Terms</span></button>
                 <button class="nav-btn" data-section="flashcards"><span class="icon">🃏</span><span>Flashcards</span></button>
                 <button class="nav-btn" data-section="quiz"><span class="icon">❓</span><span>Quiz</span></button>
-                <button class="nav-btn" data-section="calculator"><span class="icon">🧮</span><span>Calculators</span></button>
+                <button class="nav-btn" data-section="calculator"><span class="icon">📝</span><span>Writing Tools</span></button>
                 <button class="nav-btn" data-section="formulas"><span class="icon">📐</span><span>Formulas</span></button>
                 <button class="nav-btn" data-section="mindmaps"><span class="icon">🧠</span><span>Mind Maps</span></button>
-                <button class="nav-btn" data-section="experiments"><span class="icon">🧪</span><span>Experiments</span></button>
+                <button class="nav-btn" data-section="experiments"><span class="icon">💡</span><span>Techniques</span></button>
                 <button class="nav-btn" data-section="dataTables"><span class="icon">📋</span><span>Data Tables</span></button>
                 <button class="nav-btn" data-section="glossary"><span class="icon">📖</span><span>Glossary</span></button>
                 <button class="nav-btn" data-section="examMode"><span class="icon">🎯</span><span>Exam Mode</span></button>
@@ -653,7 +653,7 @@
             <section class="section active" id="dashboard">
                 <div class="section-header">
                     <h1 class="section-title">Welcome back! 👋</h1>
-                    <p class="section-subtitle">Continue your chemistry journey</p>
+                    <p class="section-subtitle">Continue your English journey</p>
                 </div>
                 <div class="dashboard-grid">
                     <div>
@@ -705,7 +705,7 @@
                             <h3 style="margin-bottom: 1rem; text-align: center;">⏰ Exam Countdown</h3>
                             <div id="examCountdown" style="text-align: center;">
                                 <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-cyan);" id="daysUntilExam">--</div>
-                                <div style="color: var(--text-secondary); font-size: 0.9rem;">days until LC Chemistry</div>
+                                <div style="color: var(--text-secondary); font-size: 0.9rem;">days until LC English</div>
                                 <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;" id="examDate">June 2025</div>
                             </div>
                         </div>
@@ -729,7 +729,7 @@
             <section class="section" id="topics">
                 <div class="section-header">
                     <h1 class="section-title">📚 Study Topics</h1>
-                    <p class="section-subtitle">Complete coverage of the LC Chemistry syllabus</p>
+                    <p class="section-subtitle">Complete coverage of the LC English syllabus</p>
                 </div>
                 <div class="card-grid" id="topicsGrid"></div>
                 <div class="topic-view" id="topicView">
@@ -738,26 +738,23 @@
                 </div>
             </section>
 
-            <!-- Periodic Table -->
+            <!-- Literary Terms -->
             <section class="section" id="periodic">
                 <div class="section-header">
-                    <h1 class="section-title">⚛️ Interactive Periodic Table</h1>
-                    <p class="section-subtitle">Click any element to learn more</p>
+                    <h1 class="section-title">📜 Literary Terms Reference</h1>
+                    <p class="section-subtitle">Click any term to learn more</p>
+                </div>
+                <div class="card" style="margin-bottom: 1rem;">
+                    <div class="formula-categories">
+                        <button class="formula-cat-btn active" data-litcat="poetry">Poetry Terms</button>
+                        <button class="formula-cat-btn" data-litcat="drama">Drama Terms</button>
+                        <button class="formula-cat-btn" data-litcat="prose">Prose/Novel Terms</button>
+                        <button class="formula-cat-btn" data-litcat="rhetoric">Rhetoric & Persuasion</button>
+                        <button class="formula-cat-btn" data-litcat="language">Language Features</button>
+                    </div>
                 </div>
                 <div class="card">
-                    <div class="periodic-container">
-                        <div class="periodic-table" id="periodicTable"></div>
-                    </div>
-                    <div class="periodic-legend">
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(255, 0, 110, 0.3);"></div>Alkali</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(255, 190, 11, 0.3);"></div>Alkaline Earth</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(0, 212, 255, 0.2);"></div>Transition</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(131, 56, 236, 0.3);"></div>Post-Trans</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(0, 255, 136, 0.2);"></div>Metalloid</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(255, 255, 255, 0.1);"></div>Nonmetal</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(0, 255, 200, 0.3);"></div>Halogen</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(100, 100, 255, 0.3);"></div>Noble Gas</div>
-                    </div>
+                    <div id="literaryTermsContent" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;"></div>
                 </div>
             </section>
 
@@ -773,13 +770,16 @@
                             <span class="control-label">Topic</span>
                             <select id="flashcardTopic">
                                 <option value="all">All Topics</option>
-                                <option value="atomic">Atomic Structure</option>
-                                <option value="bonding">Chemical Bonding</option>
-                                <option value="stoichiometry">Stoichiometry</option>
-                                <option value="organic">Organic Chemistry</option>
-                                <option value="acids">Acids & Bases</option>
-                                <option value="redox">Electrochemistry</option>
-                                <option value="rates">Rates & Equilibrium</option>
+                                <option value="poetry">Poetry</option>
+                                <option value="shakespeare">Shakespeare</option>
+                                <option value="comparative">Comparative Study</option>
+                                <option value="novel">Single Text (Novel)</option>
+                                <option value="comprehension">Comprehension</option>
+                                <option value="composing">Composing</option>
+                                <option value="language">Language of Narration</option>
+                                <option value="persuasion">Language of Argument</option>
+                                <option value="information">Language of Information</option>
+                                <option value="drama">Drama</option>
                             </select>
                         </div>
                         <div style="margin-left: auto;">
@@ -855,85 +855,101 @@
                 </div>
             </section>
 
-            <!-- Calculator -->
+            <!-- Writing Tools -->
             <section class="section" id="calculator">
                 <div class="section-header">
-                    <h1 class="section-title">🧮 Chemistry Calculators</h1>
-                    <p class="section-subtitle">Essential tools for solving chemistry problems</p>
+                    <h1 class="section-title">✍️ Writing Tools</h1>
+                    <p class="section-subtitle">Essential tools for improving your English writing</p>
                 </div>
                 <div class="calculator-grid">
                     <div class="calc-card">
-                        <h3 class="calc-title">⚖️ Mole Calculator</h3>
+                        <h3 class="calc-title">📝 Word Counter</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Mass (g)</label><input type="number" id="moleMass" placeholder="Enter mass"></div>
-                            <div class="input-group"><label>Molar Mass (g/mol)</label><input type="number" id="moleMolarMass" placeholder="Enter molar mass"></div>
-                            <button class="btn btn-primary" onclick="calculateMoles()">Calculate</button>
-                            <div class="calc-result"><div class="calc-result-label">Number of Moles</div><div class="calc-result-value" id="moleResult">—</div></div>
+                            <div class="input-group"><label>Enter your text</label><textarea id="wordCountText" placeholder="Paste or type your essay here..." rows="4" style="width:100%; resize:vertical;"></textarea></div>
+                            <button class="btn btn-primary" onclick="countWords()">Count Words</button>
+                            <div class="calc-result"><div class="calc-result-label">Word Count</div><div class="calc-result-value" id="wordCountResult">—</div></div>
+                            <div id="wordCountDetails" style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);"></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">🧪 Concentration Calculator</h3>
+                        <h3 class="calc-title">⏱️ Essay Timer</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Number of Moles (mol)</label><input type="number" id="concMoles" placeholder="Enter moles"></div>
-                            <div class="input-group"><label>Volume (L)</label><input type="number" id="concVolume" placeholder="Enter volume"></div>
-                            <button class="btn btn-primary" onclick="calculateConcentration()">Calculate</button>
-                            <div class="calc-result"><div class="calc-result-label">Concentration (M)</div><div class="calc-result-value" id="concResult">—</div></div>
+                            <div class="input-group"><label>Time Limit (minutes)</label><input type="number" id="essayTimeLimit" placeholder="e.g., 45" value="45"></div>
+                            <button class="btn btn-primary" onclick="startEssayTimer()">Start Timer</button>
+                            <button class="btn btn-secondary" onclick="stopEssayTimer()" style="margin-top:0.5rem;">Stop</button>
+                            <div class="calc-result"><div class="calc-result-label">Time Remaining</div><div class="calc-result-value" id="essayTimerResult">45:00</div></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">💧 Dilution (C₁V₁ = C₂V₂)</h3>
+                        <h3 class="calc-title">📊 Reading Time Estimator</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Initial Concentration (M)</label><input type="number" id="dilC1" placeholder="C₁"></div>
-                            <div class="input-group"><label>Initial Volume (mL)</label><input type="number" id="dilV1" placeholder="V₁"></div>
-                            <div class="input-group"><label>Final Concentration (M)</label><input type="number" id="dilC2" placeholder="C₂"></div>
-                            <button class="btn btn-primary" onclick="calculateDilution()">Calculate V₂</button>
-                            <div class="calc-result"><div class="calc-result-label">Final Volume (mL)</div><div class="calc-result-value" id="dilResult">—</div></div>
+                            <div class="input-group"><label>Word Count</label><input type="number" id="readingWordCount" placeholder="Enter word count"></div>
+                            <div class="input-group"><label>Reading Speed (WPM)</label><input type="number" id="readingSpeed" placeholder="200" value="200"></div>
+                            <button class="btn btn-primary" onclick="calculateReadingTime()">Calculate</button>
+                            <div class="calc-result"><div class="calc-result-label">Reading Time</div><div class="calc-result-value" id="readingTimeResult">—</div></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">📊 pH Calculator</h3>
+                        <h3 class="calc-title">📐 Paragraph Planner</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>[H⁺] Concentration (M)</label><input type="number" id="phConc" placeholder="e.g., 0.001" step="any"></div>
-                            <button class="btn btn-primary" onclick="calculatePH()">Calculate pH</button>
-                            <div class="calc-result"><div class="calc-result-label">pH Value</div><div class="calc-result-value" id="phResult">—</div></div>
+                            <div class="input-group"><label>Essay Type</label>
+                                <select id="essayType" style="width:100%; padding:0.5rem;">
+                                    <option value="personal">Personal Essay (5-6 paras)</option>
+                                    <option value="discursive">Discursive Essay (6-7 paras)</option>
+                                    <option value="short">Short Story (varies)</option>
+                                    <option value="speech">Speech (5-6 paras)</option>
+                                    <option value="article">Article (5-6 paras)</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" onclick="showEssayStructure()">Show Structure</button>
+                            <div id="essayStructureResult" style="margin-top: 1rem; font-size: 0.9rem; text-align: left;"></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">💨 Ideal Gas Law (PV = nRT)</h3>
+                        <h3 class="calc-title">🎯 PCLM Checker</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Pressure (atm)</label><input type="number" id="gasP" placeholder="P"></div>
-                            <div class="input-group"><label>Volume (L)</label><input type="number" id="gasV" placeholder="V"></div>
-                            <div class="input-group"><label>Temperature (K)</label><input type="number" id="gasT" placeholder="T"></div>
-                            <button class="btn btn-primary" onclick="calculateGas()">Calculate n</button>
-                            <div class="calc-result"><div class="calc-result-label">Moles of Gas (n)</div><div class="calc-result-value" id="gasResult">—</div></div>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Rate your writing against LC marking criteria</p>
+                            <div class="input-group"><label>Purpose (clear aim?)</label><input type="range" id="pclmP" min="0" max="10" value="5" style="width:100%;"></div>
+                            <div class="input-group"><label>Coherence (logical flow?)</label><input type="range" id="pclmC" min="0" max="10" value="5" style="width:100%;"></div>
+                            <div class="input-group"><label>Language (vocabulary?)</label><input type="range" id="pclmL" min="0" max="10" value="5" style="width:100%;"></div>
+                            <div class="input-group"><label>Mechanics (grammar/spelling?)</label><input type="range" id="pclmM" min="0" max="10" value="5" style="width:100%;"></div>
+                            <button class="btn btn-primary" onclick="calculatePCLM()">Calculate Score</button>
+                            <div class="calc-result"><div class="calc-result-label">Estimated %</div><div class="calc-result-value" id="pclmResult">—</div></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">⚗️ Molar Mass Calculator</h3>
+                        <h3 class="calc-title">💡 Transition Words</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Chemical Formula</label><input type="text" id="molarFormula" placeholder="e.g., H2SO4, NaCl"></div>
-                            <button class="btn btn-primary" onclick="calculateMolarMass()">Calculate</button>
-                            <div class="calc-result"><div class="calc-result-label">Molar Mass</div><div class="calc-result-value" id="molarMassResult">—</div></div>
-                            <div id="molarMassBreakdown" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary);"></div>
+                            <div class="input-group"><label>Category</label>
+                                <select id="transitionCategory" onchange="showTransitions()" style="width:100%; padding:0.5rem;">
+                                    <option value="addition">Addition</option>
+                                    <option value="contrast">Contrast</option>
+                                    <option value="cause">Cause & Effect</option>
+                                    <option value="sequence">Sequence</option>
+                                    <option value="conclusion">Conclusion</option>
+                                    <option value="emphasis">Emphasis</option>
+                                </select>
+                            </div>
+                            <div id="transitionsList" style="margin-top: 1rem; font-size: 0.9rem; text-align: left; line-height: 1.8;"></div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Formulas -->
+            <!-- Writing Frameworks -->
             <section class="section" id="formulas">
                 <div class="section-header">
-                    <h1 class="section-title">📐 Formula Reference</h1>
-                    <p class="section-subtitle">All the formulas you need for the LC Chemistry exam</p>
+                    <h1 class="section-title">📐 Writing Frameworks</h1>
+                    <p class="section-subtitle">Structures and templates for LC English writing tasks</p>
                 </div>
                 <div class="formula-categories">
                     <button class="formula-cat-btn active" data-category="all">All</button>
-                    <button class="formula-cat-btn" data-category="stoich">Stoichiometry</button>
-                    <button class="formula-cat-btn" data-category="gas">Gas Laws</button>
-                    <button class="formula-cat-btn" data-category="acids">Acids & Bases</button>
-                    <button class="formula-cat-btn" data-category="thermo">Thermochemistry</button>
-                    <button class="formula-cat-btn" data-category="rates">Rates</button>
-                    <button class="formula-cat-btn" data-category="redox">Electrochemistry</button>
+                    <button class="formula-cat-btn" data-category="essay">Essay Writing</button>
+                    <button class="formula-cat-btn" data-category="poetry">Poetry Analysis</button>
+                    <button class="formula-cat-btn" data-category="comparative">Comparative</button>
+                    <button class="formula-cat-btn" data-category="comprehension">Comprehension</button>
+                    <button class="formula-cat-btn" data-category="language">Language Analysis</button>
+                    <button class="formula-cat-btn" data-category="drama">Drama</button>
                 </div>
                 <div class="formula-list" id="formulaList"></div>
             </section>
@@ -948,15 +964,14 @@
                     <div class="control-group">
                         <span class="control-label">Select Topic</span>
                         <select id="mindmapTopic" onchange="renderMindMap(this.value)">
-                            <option value="atomic">Atomic Structure</option>
-                            <option value="bonding">Chemical Bonding</option>
-                            <option value="stoichiometry">Stoichiometry & The Mole</option>
-                            <option value="organic">Organic Chemistry</option>
-                            <option value="acids">Acids & Bases</option>
-                            <option value="redox">Electrochemistry</option>
-                            <option value="rates">Rates & Equilibrium</option>
-                            <option value="gases">Gases</option>
-                            <option value="thermo">Thermochemistry</option>
+                            <option value="poetry">Poetry Analysis</option>
+                            <option value="shakespeare">Shakespeare</option>
+                            <option value="comparative">Comparative Study</option>
+                            <option value="novel">Single Text (Novel)</option>
+                            <option value="composing">Composing</option>
+                            <option value="comprehension">Comprehension</option>
+                            <option value="persuasion">Language of Argument</option>
+                            <option value="drama">Drama</option>
                         </select>
                     </div>
                 </div>
@@ -971,11 +986,11 @@
                 </div>
             </section>
 
-            <!-- Experiments -->
+            <!-- Writing Techniques -->
             <section class="section" id="experiments">
                 <div class="section-header">
-                    <h1 class="section-title">🧪 Mandatory Experiments</h1>
-                    <p class="section-subtitle">Step-by-step guides for all required practicals</p>
+                    <h1 class="section-title">💡 Writing Techniques</h1>
+                    <p class="section-subtitle">Step-by-step guides for essays, analysis, and compositions</p>
                 </div>
                 <div class="card-grid" id="experimentsGrid"></div>
             </section>
@@ -983,16 +998,16 @@
             <!-- Data Tables -->
             <section class="section" id="dataTables">
                 <div class="section-header">
-                    <h1 class="section-title">📋 Data Tables</h1>
-                    <p class="section-subtitle">Essential reference data for calculations and exams</p>
+                    <h1 class="section-title">📋 Exam Reference</h1>
+                    <p class="section-subtitle">Essential reference data for exam preparation</p>
                 </div>
-                
+
                 <div class="formula-categories">
-                    <button class="formula-cat-btn active" data-table="electrochemical">Electrochemical Series</button>
-                    <button class="formula-cat-btn" data-table="bondEnergies">Bond Energies</button>
-                    <button class="formula-cat-btn" data-table="enthalpies">Enthalpies</button>
-                    <button class="formula-cat-btn" data-table="constants">Constants</button>
-                    <button class="formula-cat-btn" data-table="indicators">Indicators</button>
+                    <button class="formula-cat-btn active" data-table="examStructure">Exam Structure</button>
+                    <button class="formula-cat-btn" data-table="markingSchemes">Marking Criteria</button>
+                    <button class="formula-cat-btn" data-table="essayTypes">Essay Types</button>
+                    <button class="formula-cat-btn" data-table="poets">Prescribed Poets</button>
+                    <button class="formula-cat-btn" data-table="comparative">Comparative Texts</button>
                 </div>
                 
                 <div class="card">
@@ -1003,8 +1018,8 @@
             <!-- Glossary -->
             <section class="section" id="glossary">
                 <div class="section-header">
-                    <h1 class="section-title">📖 Chemistry Glossary</h1>
-                    <p class="section-subtitle">Searchable definitions of key terms</p>
+                    <h1 class="section-title">📖 English Glossary</h1>
+                    <p class="section-subtitle">Searchable definitions of literary and language terms</p>
                 </div>
                 
                 <div class="card" style="margin-bottom: 1.5rem;">
@@ -1013,11 +1028,12 @@
                     </div>
                     <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
                         <button class="formula-cat-btn active" data-glossary="all" onclick="filterGlossaryCategory('all')">All</button>
-                        <button class="formula-cat-btn" data-glossary="atomic" onclick="filterGlossaryCategory('atomic')">Atomic</button>
-                        <button class="formula-cat-btn" data-glossary="bonding" onclick="filterGlossaryCategory('bonding')">Bonding</button>
-                        <button class="formula-cat-btn" data-glossary="organic" onclick="filterGlossaryCategory('organic')">Organic</button>
-                        <button class="formula-cat-btn" data-glossary="acids" onclick="filterGlossaryCategory('acids')">Acids/Bases</button>
-                        <button class="formula-cat-btn" data-glossary="redox" onclick="filterGlossaryCategory('redox')">Redox</button>
+                        <button class="formula-cat-btn" data-glossary="poetry" onclick="filterGlossaryCategory('poetry')">Poetry</button>
+                        <button class="formula-cat-btn" data-glossary="drama" onclick="filterGlossaryCategory('drama')">Drama</button>
+                        <button class="formula-cat-btn" data-glossary="prose" onclick="filterGlossaryCategory('prose')">Prose</button>
+                        <button class="formula-cat-btn" data-glossary="rhetoric" onclick="filterGlossaryCategory('rhetoric')">Rhetoric</button>
+                        <button class="formula-cat-btn" data-glossary="language" onclick="filterGlossaryCategory('language')">Language</button>
+                        <button class="formula-cat-btn" data-glossary="writing" onclick="filterGlossaryCategory('writing')">Writing</button>
                     </div>
                 </div>
                 
@@ -1149,61 +1165,77 @@
         </main>
     </div>
 
-    <!-- Element Modal -->
+    <!-- Term Details Modal -->
     <div class="modal-overlay" id="elementModal">
         <div class="modal">
-            <div class="modal-header"><h3>Element Details</h3><button class="modal-close" id="closeModal">×</button></div>
+            <div class="modal-header"><h3>Term Details</h3><button class="modal-close" id="closeModal">×</button></div>
             <div class="modal-body" id="elementModalBody"></div>
         </div>
     </div>
 
     <script>
         // ==================== DATA ====================
-        const elements = [
-            { number: 1, symbol: 'H', name: 'Hydrogen', mass: 1.008, category: 'nonmetal', group: 1, period: 1, electronConfig: '1s¹', electronegativity: 2.20 },
-            { number: 2, symbol: 'He', name: 'Helium', mass: 4.003, category: 'noble', group: 18, period: 1, electronConfig: '1s²' },
-            { number: 3, symbol: 'Li', name: 'Lithium', mass: 6.941, category: 'alkali', group: 1, period: 2, electronConfig: '[He] 2s¹', electronegativity: 0.98 },
-            { number: 4, symbol: 'Be', name: 'Beryllium', mass: 9.012, category: 'alkaline', group: 2, period: 2, electronConfig: '[He] 2s²', electronegativity: 1.57 },
-            { number: 5, symbol: 'B', name: 'Boron', mass: 10.81, category: 'metalloid', group: 13, period: 2 },
-            { number: 6, symbol: 'C', name: 'Carbon', mass: 12.01, category: 'nonmetal', group: 14, period: 2, electronConfig: '[He] 2s² 2p²', electronegativity: 2.55 },
-            { number: 7, symbol: 'N', name: 'Nitrogen', mass: 14.01, category: 'nonmetal', group: 15, period: 2, electronConfig: '[He] 2s² 2p³', electronegativity: 3.04 },
-            { number: 8, symbol: 'O', name: 'Oxygen', mass: 16.00, category: 'nonmetal', group: 16, period: 2, electronConfig: '[He] 2s² 2p⁴', electronegativity: 3.44 },
-            { number: 9, symbol: 'F', name: 'Fluorine', mass: 19.00, category: 'halogen', group: 17, period: 2, electronConfig: '[He] 2s² 2p⁵', electronegativity: 3.98 },
-            { number: 10, symbol: 'Ne', name: 'Neon', mass: 20.18, category: 'noble', group: 18, period: 2 },
-            { number: 11, symbol: 'Na', name: 'Sodium', mass: 22.99, category: 'alkali', group: 1, period: 3, electronConfig: '[Ne] 3s¹', electronegativity: 0.93 },
-            { number: 12, symbol: 'Mg', name: 'Magnesium', mass: 24.31, category: 'alkaline', group: 2, period: 3, electronConfig: '[Ne] 3s²', electronegativity: 1.31 },
-            { number: 13, symbol: 'Al', name: 'Aluminium', mass: 26.98, category: 'post-transition', group: 13, period: 3 },
-            { number: 14, symbol: 'Si', name: 'Silicon', mass: 28.09, category: 'metalloid', group: 14, period: 3 },
-            { number: 15, symbol: 'P', name: 'Phosphorus', mass: 30.97, category: 'nonmetal', group: 15, period: 3 },
-            { number: 16, symbol: 'S', name: 'Sulfur', mass: 32.07, category: 'nonmetal', group: 16, period: 3, electronConfig: '[Ne] 3s² 3p⁴', electronegativity: 2.58 },
-            { number: 17, symbol: 'Cl', name: 'Chlorine', mass: 35.45, category: 'halogen', group: 17, period: 3, electronConfig: '[Ne] 3s² 3p⁵', electronegativity: 3.16 },
-            { number: 18, symbol: 'Ar', name: 'Argon', mass: 39.95, category: 'noble', group: 18, period: 3 },
-            { number: 19, symbol: 'K', name: 'Potassium', mass: 39.10, category: 'alkali', group: 1, period: 4, electronConfig: '[Ar] 4s¹', electronegativity: 0.82 },
-            { number: 20, symbol: 'Ca', name: 'Calcium', mass: 40.08, category: 'alkaline', group: 2, period: 4, electronConfig: '[Ar] 4s²', electronegativity: 1.00 },
-            { number: 21, symbol: 'Sc', name: 'Scandium', mass: 44.96, category: 'transition', group: 3, period: 4 },
-            { number: 22, symbol: 'Ti', name: 'Titanium', mass: 47.87, category: 'transition', group: 4, period: 4 },
-            { number: 23, symbol: 'V', name: 'Vanadium', mass: 50.94, category: 'transition', group: 5, period: 4 },
-            { number: 24, symbol: 'Cr', name: 'Chromium', mass: 52.00, category: 'transition', group: 6, period: 4 },
-            { number: 25, symbol: 'Mn', name: 'Manganese', mass: 54.94, category: 'transition', group: 7, period: 4 },
-            { number: 26, symbol: 'Fe', name: 'Iron', mass: 55.85, category: 'transition', group: 8, period: 4, electronConfig: '[Ar] 3d⁶ 4s²', electronegativity: 1.83 },
-            { number: 27, symbol: 'Co', name: 'Cobalt', mass: 58.93, category: 'transition', group: 9, period: 4 },
-            { number: 28, symbol: 'Ni', name: 'Nickel', mass: 58.69, category: 'transition', group: 10, period: 4 },
-            { number: 29, symbol: 'Cu', name: 'Copper', mass: 63.55, category: 'transition', group: 11, period: 4, electronConfig: '[Ar] 3d¹⁰ 4s¹', electronegativity: 1.90 },
-            { number: 30, symbol: 'Zn', name: 'Zinc', mass: 65.38, category: 'transition', group: 12, period: 4, electronConfig: '[Ar] 3d¹⁰ 4s²', electronegativity: 1.65 },
-            { number: 31, symbol: 'Ga', name: 'Gallium', mass: 69.72, category: 'post-transition', group: 13, period: 4 },
-            { number: 32, symbol: 'Ge', name: 'Germanium', mass: 72.63, category: 'metalloid', group: 14, period: 4 },
-            { number: 33, symbol: 'As', name: 'Arsenic', mass: 74.92, category: 'metalloid', group: 15, period: 4 },
-            { number: 34, symbol: 'Se', name: 'Selenium', mass: 78.97, category: 'nonmetal', group: 16, period: 4 },
-            { number: 35, symbol: 'Br', name: 'Bromine', mass: 79.90, category: 'halogen', group: 17, period: 4, electronConfig: '[Ar] 3d¹⁰ 4s² 4p⁵', electronegativity: 2.96 },
-            { number: 36, symbol: 'Kr', name: 'Krypton', mass: 83.80, category: 'noble', group: 18, period: 4 }
-        ];
-
-        const atomicMasses = {
-            'H': 1.008, 'He': 4.003, 'Li': 6.941, 'Be': 9.012, 'B': 10.81, 'C': 12.01,
-            'N': 14.01, 'O': 16.00, 'F': 19.00, 'Ne': 20.18, 'Na': 22.99, 'Mg': 24.31,
-            'Al': 26.98, 'Si': 28.09, 'P': 30.97, 'S': 32.07, 'Cl': 35.45, 'Ar': 39.95,
-            'K': 39.10, 'Ca': 40.08, 'Fe': 55.85, 'Cu': 63.55, 'Zn': 65.38, 'Br': 79.90,
-            'Ag': 107.9, 'I': 126.9, 'Ba': 137.3, 'Au': 197.0, 'Pb': 207.2
+        const literaryTerms = {
+            poetry: [
+                { term: 'Metaphor', def: 'A direct comparison between two things without using "like" or "as".', example: '"Life is a journey"' },
+                { term: 'Simile', def: 'A comparison using "like" or "as".', example: '"Her eyes sparkled like stars"' },
+                { term: 'Personification', def: 'Giving human qualities to non-human things.', example: '"The wind whispered through the trees"' },
+                { term: 'Alliteration', def: 'Repetition of consonant sounds at the beginning of words.', example: '"Peter Piper picked a peck"' },
+                { term: 'Assonance', def: 'Repetition of vowel sounds within words.', example: '"The rain in Spain stays mainly"' },
+                { term: 'Onomatopoeia', def: 'Words that imitate sounds.', example: '"buzz", "crash", "whisper"' },
+                { term: 'Imagery', def: 'Descriptive language that appeals to the senses.', example: 'Visual, auditory, tactile, olfactory, gustatory' },
+                { term: 'Symbolism', def: 'Using objects or images to represent abstract ideas.', example: 'A dove symbolising peace' },
+                { term: 'Enjambment', def: 'Running a sentence from one line to the next without pause.', example: 'Creates flow and urgency' },
+                { term: 'Caesura', def: 'A pause in the middle of a line of poetry.', example: '"To be, || or not to be"' }
+            ],
+            drama: [
+                { term: 'Soliloquy', def: 'A speech where a character reveals thoughts aloud, alone on stage.', example: 'Hamlet\'s "To be or not to be"' },
+                { term: 'Aside', def: 'A remark spoken to the audience, unheard by other characters.', example: 'Used for dramatic irony' },
+                { term: 'Dramatic Irony', def: 'When the audience knows something characters do not.', example: 'Romeo thinking Juliet is dead' },
+                { term: 'Tragedy', def: 'A drama ending in catastrophe for the protagonist.', example: 'Macbeth, Hamlet, King Lear' },
+                { term: 'Tragic Hero', def: 'A noble protagonist whose flaw leads to downfall.', example: 'Macbeth\'s ambition' },
+                { term: 'Hamartia', def: 'The tragic hero\'s fatal flaw.', example: 'Othello\'s jealousy' },
+                { term: 'Catharsis', def: 'Emotional release experienced by the audience.', example: 'Pity and fear in tragedy' },
+                { term: 'Foil', def: 'A character who contrasts with another to highlight traits.', example: 'Banquo as foil to Macbeth' },
+                { term: 'Monologue', def: 'A long speech by one character to others on stage.', example: 'Different from soliloquy' },
+                { term: 'Stage Directions', def: 'Instructions in the script about movement, setting, tone.', example: '[Exit, pursued by a bear]' }
+            ],
+            prose: [
+                { term: 'Narrator', def: 'The voice telling the story.', example: 'First person, third person, omniscient' },
+                { term: 'Point of View', def: 'The perspective from which a story is told.', example: 'First person (I), Third person (he/she)' },
+                { term: 'Foreshadowing', def: 'Hints about what will happen later in the story.', example: 'Creates suspense and anticipation' },
+                { term: 'Flashback', def: 'A scene set earlier than the main story.', example: 'Reveals backstory' },
+                { term: 'Stream of Consciousness', def: 'Writing that mimics the flow of thoughts.', example: 'James Joyce\'s style' },
+                { term: 'Protagonist', def: 'The main character of a narrative.', example: 'Often the hero or central figure' },
+                { term: 'Antagonist', def: 'The character opposing the protagonist.', example: 'The villain or obstacle' },
+                { term: 'Setting', def: 'The time and place of a story.', example: 'Creates atmosphere and context' },
+                { term: 'Theme', def: 'The central idea or message of a work.', example: 'Love, death, identity, power' },
+                { term: 'Motif', def: 'A recurring element with symbolic significance.', example: 'Blood in Macbeth' }
+            ],
+            rhetoric: [
+                { term: 'Ethos', def: 'Appeal to credibility and ethics.', example: 'Establishing authority' },
+                { term: 'Pathos', def: 'Appeal to emotions.', example: 'Evoking sympathy or fear' },
+                { term: 'Logos', def: 'Appeal to logic and reason.', example: 'Using statistics and evidence' },
+                { term: 'Rhetorical Question', def: 'A question asked for effect, not expecting an answer.', example: '"Is this what we want?"' },
+                { term: 'Anaphora', def: 'Repetition of words at the start of successive clauses.', example: '"We shall fight... We shall fight..."' },
+                { term: 'Hyperbole', def: 'Deliberate exaggeration for emphasis.', example: '"I\'ve told you a million times"' },
+                { term: 'Understatement', def: 'Deliberately downplaying something.', example: '"It\'s just a scratch" (for a major injury)' },
+                { term: 'Antithesis', def: 'Contrasting ideas in balanced phrases.', example: '"Ask not what your country can do for you"' },
+                { term: 'Tricolon', def: 'A series of three parallel elements.', example: '"Veni, vidi, vici"' },
+                { term: 'Juxtaposition', def: 'Placing contrasting elements side by side.', example: 'Light and darkness imagery' }
+            ],
+            language: [
+                { term: 'Tone', def: 'The writer\'s attitude toward the subject.', example: 'Sarcastic, sincere, melancholic' },
+                { term: 'Mood', def: 'The atmosphere created for the reader.', example: 'Tense, peaceful, ominous' },
+                { term: 'Diction', def: 'Word choice and style of expression.', example: 'Formal, colloquial, archaic' },
+                { term: 'Syntax', def: 'The arrangement of words in sentences.', example: 'Short sentences create tension' },
+                { term: 'Register', def: 'Level of formality in language.', example: 'Formal, informal, technical' },
+                { term: 'Irony', def: 'Saying one thing but meaning another.', example: 'Verbal, situational, dramatic' },
+                { term: 'Euphemism', def: 'A mild expression for something harsh.', example: '"Passed away" for "died"' },
+                { term: 'Oxymoron', def: 'Combining contradictory terms.', example: '"Deafening silence"' },
+                { term: 'Paradox', def: 'A statement that seems contradictory but reveals truth.', example: '"Less is more"' },
+                { term: 'Connotation', def: 'The emotional associations of a word.', example: '"Home" vs "house"' }
+            ]
         };
 
         const topics = [
@@ -1354,20 +1386,33 @@
         };
 
         const formulasData = [
-            { name: "PEEL Paragraph", equation: "Point → Evidence → Explain → Link", desc: "Structure for analytical paragraphs", vars: "Make a point, support with evidence, explain significance, link to question", category: "writing" },
-            { name: "Rhetorical Triangle", equation: "Ethos + Pathos + Logos", desc: "Three modes of persuasion", vars: "Ethos (credibility), Pathos (emotion), Logos (logic)", category: "persuasion" },
+            // Essay Writing
+            { name: "PEEL Paragraph", equation: "Point → Evidence → Explain → Link", desc: "Structure for analytical paragraphs", vars: "Make a point, support with evidence, explain significance, link to question", category: "essay" },
+            { name: "Essay Introduction", equation: "Hook + Context + Thesis", desc: "Opening an essay effectively", vars: "Engage reader, set context, state your argument", category: "essay" },
+            { name: "Essay Conclusion", equation: "Summarise + Synthesise + Significance", desc: "Closing an essay effectively", vars: "Recap main points, bring together ideas, wider implications", category: "essay" },
+            { name: "Quote Integration", equation: "Introduce + Quote + Analyse", desc: "Using quotations effectively", vars: "Set up the quote, insert quote, explain its significance", category: "essay" },
+            { name: "Personal Essay", equation: "Reflect + Narrate + Insight", desc: "Structure for personal writing", vars: "Show reflection, tell story, reveal personal growth", category: "essay" },
+            { name: "Speech Structure", equation: "Hook + Body + Call to Action", desc: "Effective speech organisation", vars: "Grab attention, develop argument, inspire action", category: "essay" },
+            // Poetry Analysis
+            { name: "Poetry Analysis (SMILE)", equation: "Structure + Meaning + Imagery + Language + Effect", desc: "Comprehensive poetry analysis framework", vars: "Examine form, interpret meaning, analyse imagery, study language, evaluate effect", category: "poetry" },
+            { name: "Theme + Technique + Effect", equation: "What + How + Why", desc: "Core approach for poetry questions", vars: "What is said (theme), how it's said (technique), why (effect on reader)", category: "poetry" },
+            { name: "Sound Devices", equation: "Alliteration + Assonance + Rhythm + Rhyme", desc: "Analysing sound in poetry", vars: "Examine how sound enhances meaning and mood", category: "poetry" },
+            // Comparative
             { name: "Comparative Structure", equation: "Link → Compare → Contrast → Conclude", desc: "Structure for comparative paragraphs", vars: "Always link texts, find similarities and differences", category: "comparative" },
-            { name: "Poetry Analysis", equation: "Theme + Technique + Effect", desc: "Approach for poetry questions", vars: "What is said (theme), how it's said (technique), why (effect)", category: "poetry" },
-            { name: "Character Analysis", equation: "Trait + Evidence + Development", desc: "Analysing characters in texts", vars: "Identify trait, support with quotes, show change", category: "novel" },
-            { name: "Essay Introduction", equation: "Hook + Context + Thesis", desc: "Opening an essay effectively", vars: "Engage reader, set context, state your argument", category: "writing" },
-            { name: "Essay Conclusion", equation: "Summarise + Synthesise + Significance", desc: "Closing an essay effectively", vars: "Recap main points, bring together ideas, wider implications", category: "writing" },
-            { name: "Personal Essay", equation: "Reflect + Narrate + Insight", desc: "Structure for personal writing", vars: "Show reflection, tell story, reveal personal growth", category: "composing" },
-            { name: "Speech Structure", equation: "Hook + Body + Call to Action", desc: "Effective speech organisation", vars: "Grab attention, develop argument, inspire action", category: "composing" },
+            { name: "Mode of Comparison", equation: "Theme/Issue + All 3 Texts + Personal Response", desc: "Answering comparative questions", vars: "Address mode, reference all texts equally, include personal response", category: "comparative" },
+            { name: "Linking Phrases", equation: "Similarly + In contrast + Likewise + However", desc: "Connecting ideas across texts", vars: "Use linking phrases to show comparison and contrast", category: "comparative" },
+            // Comprehension
             { name: "Comprehension Approach", equation: "Read + Identify + Analyse + Quote", desc: "Answering comprehension questions", vars: "Read carefully, identify features, analyse effect, use evidence", category: "comprehension" },
             { name: "Visual Text Analysis", equation: "Image + Text + Context + Effect", desc: "Analysing visual media", vars: "Examine visuals, read accompanying text, consider context, discuss impact", category: "comprehension" },
+            { name: "Question B Strategy", equation: "Identify Style + Apply Features + Own Voice", desc: "Answering functional writing questions", vars: "Identify text type, use appropriate conventions, maintain authenticity", category: "comprehension" },
+            // Language Analysis
+            { name: "Rhetorical Triangle", equation: "Ethos + Pathos + Logos", desc: "Three modes of persuasion", vars: "Ethos (credibility), Pathos (emotion), Logos (logic)", category: "language" },
+            { name: "Tone Analysis", equation: "Word Choice + Sentence Structure + Effect", desc: "Identifying and analysing tone", vars: "Examine diction, look at syntax, explain impact on reader", category: "language" },
+            { name: "Language of Argument", equation: "Assertion + Evidence + Explanation", desc: "Building persuasive arguments", vars: "Make claim, support with evidence, explain significance", category: "language" },
+            // Drama
             { name: "Drama Analysis", equation: "Conflict + Character + Theme + Staging", desc: "Analysing dramatic texts", vars: "Central conflict, character motivations, themes, performance elements", category: "drama" },
-            { name: "Quote Integration", equation: "Introduce + Quote + Analyse", desc: "Using quotations effectively", vars: "Set up the quote, insert quote, explain its significance", category: "writing" },
-            { name: "Tone Analysis", equation: "Word Choice + Sentence Structure + Effect", desc: "Identifying and analysing tone", vars: "Examine diction, look at syntax, explain impact on reader", category: "language" }
+            { name: "Character Analysis", equation: "Trait + Evidence + Development", desc: "Analysing characters in texts", vars: "Identify trait, support with quotes, show change", category: "drama" },
+            { name: "Scene Analysis", equation: "Context + Action + Dialogue + Significance", desc: "Analysing key scenes", vars: "Where in play, what happens, what's said, why it matters", category: "drama" }
         ];
 
         const experimentsData = [
@@ -1392,7 +1437,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             createMolecules();
             initNavigation();
-            initPeriodicTable();
+            initLiteraryTerms();
             initTopics();
             initFlashcards();
             initQuiz();
@@ -1465,51 +1510,112 @@
             setTimeout(() => showTopicContent(topicId), 100);
         }
 
-        // ==================== PERIODIC TABLE ====================
-        function initPeriodicTable() {
-            const table = document.getElementById('periodicTable');
-            const layout = [
-                [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
-                [3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 7, 8, 9, 10],
-                [11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 14, 15, 16, 17, 18],
-                [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
-            ];
-            layout.forEach(row => {
-                row.forEach(num => {
-                    if (num === 0) {
-                        const spacer = document.createElement('div');
-                        spacer.className = 'element-spacer';
-                        table.appendChild(spacer);
-                    } else {
-                        const el = elements.find(e => e.number === num);
-                        if (el) {
-                            const elem = document.createElement('div');
-                            elem.className = `element ${el.category}`;
-                            elem.innerHTML = `<span class="number">${el.number}</span><span class="symbol">${el.symbol}</span><span class="name">${el.name}</span>`;
-                            elem.addEventListener('click', () => showElementModal(el));
-                            table.appendChild(elem);
-                        }
-                    }
+        // ==================== LITERARY TERMS ====================
+        const literaryTerms = {
+            poetry: [
+                { term: 'Metaphor', def: 'A direct comparison between two things without using "like" or "as".', example: '"Life is a journey"' },
+                { term: 'Simile', def: 'A comparison using "like" or "as".', example: '"Her eyes sparkled like stars"' },
+                { term: 'Personification', def: 'Giving human qualities to non-human things.', example: '"The wind whispered through the trees"' },
+                { term: 'Alliteration', def: 'Repetition of consonant sounds at the beginning of words.', example: '"Peter Piper picked a peck"' },
+                { term: 'Assonance', def: 'Repetition of vowel sounds within words.', example: '"The rain in Spain falls mainly on the plain"' },
+                { term: 'Onomatopoeia', def: 'Words that imitate sounds.', example: '"buzz", "crash", "whisper"' },
+                { term: 'Enjambment', def: 'When a sentence continues from one line to the next without punctuation.', example: 'Running over line breaks' },
+                { term: 'Caesura', def: 'A pause in the middle of a line of poetry.', example: '"To be, || or not to be"' },
+                { term: 'Volta', def: 'A turn or shift in thought in a poem, especially in sonnets.', example: 'Often at line 9 in a sonnet' },
+                { term: 'Imagery', def: 'Descriptive language that appeals to the senses.', example: 'Visual, auditory, tactile imagery' },
+                { term: 'Symbolism', def: 'Using objects to represent abstract ideas.', example: 'A dove symbolising peace' },
+                { term: 'Oxymoron', def: 'Two contradictory words placed together.', example: '"bitter sweet", "living death"' }
+            ],
+            drama: [
+                { term: 'Soliloquy', def: 'A speech where a character speaks thoughts aloud, alone on stage.', example: '"To be or not to be" - Hamlet' },
+                { term: 'Aside', def: 'A remark heard by the audience but not by other characters.', example: 'Breaking the fourth wall' },
+                { term: 'Monologue', def: 'An extended speech by one character, others may be present.', example: 'Different from soliloquy' },
+                { term: 'Dramatic Irony', def: 'When the audience knows something characters do not.', example: 'Audience knows the killer\'s identity' },
+                { term: 'Tragic Hero', def: 'A protagonist of high status with a fatal flaw leading to downfall.', example: 'Macbeth, Hamlet, Othello' },
+                { term: 'Hamartia', def: 'The tragic hero\'s fatal flaw or error in judgement.', example: 'Macbeth\'s ambition' },
+                { term: 'Catharsis', def: 'Emotional release or purification experienced by the audience.', example: 'Feeling cleansed after tragedy' },
+                { term: 'Stage Directions', def: 'Instructions about movement, tone, lighting, or setting.', example: '[Enter HAMLET, reading]' },
+                { term: 'Subtext', def: 'The underlying meaning beneath the dialogue.', example: 'What characters really mean' },
+                { term: 'Anagnorisis', def: 'The moment of critical discovery or recognition.', example: 'Oedipus learns the truth' }
+            ],
+            prose: [
+                { term: 'Narrator', def: 'The voice telling the story.', example: 'First person, third person, omniscient' },
+                { term: 'Unreliable Narrator', def: 'A narrator whose account cannot be fully trusted.', example: 'Biased or limited perspective' },
+                { term: 'Stream of Consciousness', def: 'Narrative presenting continuous flow of thoughts.', example: 'James Joyce\'s style' },
+                { term: 'Foreshadowing', def: 'Hints or clues about events that will happen later.', example: 'Early warning signs in plot' },
+                { term: 'Flashback', def: 'A scene that interrupts the present to show past events.', example: 'Memory sequences' },
+                { term: 'Motif', def: 'A recurring element that develops a theme.', example: 'Repeated images or ideas' },
+                { term: 'Characterisation', def: 'Methods used to develop and reveal characters.', example: 'Direct and indirect methods' },
+                { term: 'Setting', def: 'The time and place of the narrative.', example: 'Creates atmosphere and context' },
+                { term: 'Point of View', def: 'The perspective from which the story is told.', example: 'First, second, or third person' },
+                { term: 'Pathetic Fallacy', def: 'Nature reflecting human emotions.', example: 'Storms during emotional scenes' }
+            ],
+            rhetoric: [
+                { term: 'Ethos', def: 'Persuasion through credibility and ethics.', example: '"As a doctor, I can tell you..."' },
+                { term: 'Pathos', def: 'Persuasion through emotional appeal.', example: 'Stories that evoke sympathy' },
+                { term: 'Logos', def: 'Persuasion through logic and reasoning.', example: 'Statistics and evidence' },
+                { term: 'Rhetorical Question', def: 'A question asked for effect, not expecting an answer.', example: '"Is this what we want?"' },
+                { term: 'Anaphora', def: 'Repetition at the beginning of successive clauses.', example: '"I have a dream..."' },
+                { term: 'Hyperbole', def: 'Deliberate exaggeration for emphasis.', example: '"I\'ve told you a million times"' },
+                { term: 'Tricolon', def: 'Three parallel words, phrases, or clauses.', example: '"Veni, vidi, vici"' },
+                { term: 'Antithesis', def: 'Contrasting ideas in balanced phrases.', example: '"It was the best of times, it was the worst of times"' },
+                { term: 'Emotive Language', def: 'Words chosen to evoke emotional responses.', example: '"Innocent children suffered"' },
+                { term: 'Inclusive Language', def: 'Using "we" and "our" to create unity.', example: '"We must work together"' }
+            ],
+            language: [
+                { term: 'Tone', def: 'The writer\'s attitude towards subject or audience.', example: 'Serious, humorous, ironic' },
+                { term: 'Register', def: 'The level of formality in language.', example: 'Formal, informal, colloquial' },
+                { term: 'Diction', def: 'Word choice and vocabulary selection.', example: 'Simple vs complex words' },
+                { term: 'Syntax', def: 'Sentence structure and arrangement.', example: 'Short sentences for impact' },
+                { term: 'Juxtaposition', def: 'Placing contrasting elements side by side.', example: 'Light vs dark imagery' },
+                { term: 'Irony', def: 'When meaning is opposite to what is said.', example: '"What lovely weather" in a storm' },
+                { term: 'Sarcasm', def: 'Mocking or contemptuous irony.', example: '"Oh, that\'s just great"' },
+                { term: 'Euphemism', def: 'A mild word substituted for a harsh one.', example: '"Passed away" for "died"' },
+                { term: 'Colloquialism', def: 'Informal everyday language.', example: '"Gonna", "wanna", slang' },
+                { term: 'Connotation', def: 'The implied meaning beyond literal definition.', example: '"Home" vs "house"' }
+            ]
+        };
+
+        let currentLitCategory = 'poetry';
+
+        function initLiteraryTerms() {
+            renderLiteraryTerms('poetry');
+            document.querySelectorAll('[data-litcat]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('[data-litcat]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderLiteraryTerms(btn.dataset.litcat);
                 });
             });
         }
 
-        function showElementModal(el) {
+        function renderLiteraryTerms(category) {
+            currentLitCategory = category;
+            const container = document.getElementById('literaryTermsContent');
+            const terms = literaryTerms[category] || [];
+            container.innerHTML = terms.map(t => `
+                <div class="card" style="padding: 1rem; cursor: pointer; transition: all 0.3s;" onclick="showTermDetail('${t.term.replace(/'/g, "\\'")}', '${t.def.replace(/'/g, "\\'")}', '${t.example.replace(/'/g, "\\'")}')">
+                    <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">${t.term}</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">${t.def}</p>
+                    <p style="color: var(--text-muted); font-size: 0.8rem; font-style: italic;">Example: ${t.example}</p>
+                </div>
+            `).join('');
+        }
+
+        function showTermDetail(term, def, example) {
             const modal = document.getElementById('elementModal');
             const body = document.getElementById('elementModalBody');
-            const catNames = { 'alkali': 'Alkali Metal', 'alkaline': 'Alkaline Earth Metal', 'transition': 'Transition Metal', 'post-transition': 'Post-Transition Metal', 'metalloid': 'Metalloid', 'nonmetal': 'Nonmetal', 'halogen': 'Halogen', 'noble': 'Noble Gas' };
             body.innerHTML = `
-                <div class="element-detail-header">
-                    <div class="element-big ${el.category}"><span class="number">${el.number}</span><span class="symbol">${el.symbol}</span></div>
-                    <div class="element-info"><h2>${el.name}</h2><p>${catNames[el.category] || el.category}</p></div>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <h2 style="color: var(--accent-cyan); font-size: 1.75rem;">${term}</h2>
                 </div>
-                <div class="element-properties">
-                    <div class="property"><div class="property-label">Atomic Mass</div><div class="property-value">${el.mass} u</div></div>
-                    <div class="property"><div class="property-label">Atomic Number</div><div class="property-value">${el.number}</div></div>
-                    <div class="property"><div class="property-label">Group</div><div class="property-value">${el.group || 'N/A'}</div></div>
-                    <div class="property"><div class="property-label">Period</div><div class="property-value">${el.period || 'N/A'}</div></div>
-                    ${el.electronConfig ? `<div class="property"><div class="property-label">Electron Config</div><div class="property-value" style="font-size: 0.85rem;">${el.electronConfig}</div></div>` : ''}
-                    ${el.electronegativity ? `<div class="property"><div class="property-label">Electronegativity</div><div class="property-value">${el.electronegativity}</div></div>` : ''}
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--text-muted); margin-bottom: 0.5rem;">Definition</h4>
+                    <p style="color: var(--text-primary); font-size: 1.1rem; line-height: 1.6;">${def}</p>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-cyan);">
+                    <h4 style="color: var(--text-muted); margin-bottom: 0.5rem;">Example</h4>
+                    <p style="color: var(--accent-green); font-style: italic;">${example}</p>
                 </div>`;
             modal.classList.add('active');
         }
@@ -1663,22 +1769,72 @@
         }
         function quitQuiz() { document.getElementById('quizArea').style.display = 'none'; document.getElementById('quizSetup').style.display = 'block'; }
 
-        // ==================== CALCULATORS ====================
-        function calculateMoles() { const mass = parseFloat(document.getElementById('moleMass').value), molarMass = parseFloat(document.getElementById('moleMolarMass').value); if (!isNaN(mass) && !isNaN(molarMass) && molarMass !== 0) document.getElementById('moleResult').textContent = (mass / molarMass).toFixed(4) + ' mol'; }
-        function calculateConcentration() { const moles = parseFloat(document.getElementById('concMoles').value), volume = parseFloat(document.getElementById('concVolume').value); if (!isNaN(moles) && !isNaN(volume) && volume !== 0) document.getElementById('concResult').textContent = (moles / volume).toFixed(4) + ' M'; }
-        function calculateDilution() { const c1 = parseFloat(document.getElementById('dilC1').value), v1 = parseFloat(document.getElementById('dilV1').value), c2 = parseFloat(document.getElementById('dilC2').value); if (!isNaN(c1) && !isNaN(v1) && !isNaN(c2) && c2 !== 0) document.getElementById('dilResult').textContent = ((c1 * v1) / c2).toFixed(2) + ' mL'; }
-        function calculatePH() { const conc = parseFloat(document.getElementById('phConc').value); if (!isNaN(conc) && conc > 0) document.getElementById('phResult').textContent = (-Math.log10(conc)).toFixed(2); }
-        function calculateGas() { const P = parseFloat(document.getElementById('gasP').value), V = parseFloat(document.getElementById('gasV').value), T = parseFloat(document.getElementById('gasT').value); if (!isNaN(P) && !isNaN(V) && !isNaN(T) && T !== 0) document.getElementById('gasResult').textContent = ((P * V) / (0.0821 * T)).toFixed(4) + ' mol'; }
-        function calculateMolarMass() {
-            const formula = document.getElementById('molarFormula').value.trim();
-            if (!formula) return;
-            const parsed = {}, regex = /([A-Z][a-z]?)(\d*)/g; let match;
-            while ((match = regex.exec(formula)) !== null) { parsed[match[1]] = (parsed[match[1]] || 0) + (match[2] ? parseInt(match[2]) : 1); }
-            let total = 0, breakdown = [];
-            for (const [el, count] of Object.entries(parsed)) { const mass = atomicMasses[el]; if (mass) { total += mass * count; breakdown.push(`${el}: ${mass} × ${count} = ${(mass * count).toFixed(2)}`); } }
-            document.getElementById('molarMassResult').textContent = total.toFixed(2) + ' g/mol';
-            document.getElementById('molarMassBreakdown').innerHTML = breakdown.join('<br>');
+        // ==================== WRITING TOOLS ====================
+        function countWords() {
+            const text = document.getElementById('wordCountText').value.trim();
+            if (!text) { document.getElementById('wordCountResult').textContent = '0'; document.getElementById('wordCountDetails').textContent = ''; return; }
+            const words = text.split(/\s+/).filter(w => w.length > 0).length;
+            const chars = text.length;
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+            const paragraphs = text.split(/\n\n+/).filter(p => p.trim().length > 0).length;
+            document.getElementById('wordCountResult').textContent = words + ' words';
+            document.getElementById('wordCountDetails').innerHTML = `Characters: ${chars} | Sentences: ${sentences} | Paragraphs: ${paragraphs}`;
         }
+        let essayTimerInterval = null;
+        function startEssayTimer() {
+            if (essayTimerInterval) clearInterval(essayTimerInterval);
+            let minutes = parseInt(document.getElementById('essayTimeLimit').value) || 45;
+            let seconds = minutes * 60;
+            const display = document.getElementById('essayTimerResult');
+            essayTimerInterval = setInterval(() => {
+                const m = Math.floor(seconds / 60), s = seconds % 60;
+                display.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+                if (seconds <= 0) { clearInterval(essayTimerInterval); display.textContent = 'Time up!'; if ('Notification' in window && Notification.permission === 'granted') new Notification('Essay Timer', { body: 'Time is up!' }); }
+                seconds--;
+            }, 1000);
+        }
+        function stopEssayTimer() { if (essayTimerInterval) { clearInterval(essayTimerInterval); essayTimerInterval = null; } }
+        function calculateReadingTime() {
+            const words = parseInt(document.getElementById('readingWordCount').value) || 0;
+            const wpm = parseInt(document.getElementById('readingSpeed').value) || 200;
+            if (words > 0 && wpm > 0) {
+                const mins = Math.ceil(words / wpm);
+                document.getElementById('readingTimeResult').textContent = `${mins} min${mins > 1 ? 's' : ''}`;
+            }
+        }
+        function showEssayStructure() {
+            const type = document.getElementById('essayType').value;
+            const structures = {
+                personal: '<strong>Personal Essay:</strong><br>1. Opening hook (anecdote/moment)<br>2. Set the scene<br>3. Building tension/conflict<br>4. Climax/turning point<br>5. Reflection & insight<br>6. Conclusion (wider meaning)',
+                discursive: '<strong>Discursive Essay:</strong><br>1. Introduction + thesis<br>2. Point 1 (for)<br>3. Point 2 (for)<br>4. Point 3 (against)<br>5. Point 4 (against)<br>6. Balanced evaluation<br>7. Conclusion',
+                short: '<strong>Short Story:</strong><br>1. Opening hook<br>2. Character/setting introduction<br>3. Rising action<br>4. Climax<br>5. Falling action<br>6. Resolution/twist',
+                speech: '<strong>Speech:</strong><br>1. Attention-grabbing opening<br>2. State your position<br>3. Main argument 1<br>4. Main argument 2<br>5. Address counter-arguments<br>6. Call to action',
+                article: '<strong>Article:</strong><br>1. Catchy headline + opening<br>2. Context/background<br>3. Main point 1<br>4. Main point 2<br>5. Expert opinion/stats<br>6. Conclusion'
+            };
+            document.getElementById('essayStructureResult').innerHTML = structures[type] || '';
+        }
+        function calculatePCLM() {
+            const p = parseInt(document.getElementById('pclmP').value) || 0;
+            const c = parseInt(document.getElementById('pclmC').value) || 0;
+            const l = parseInt(document.getElementById('pclmL').value) || 0;
+            const m = parseInt(document.getElementById('pclmM').value) || 0;
+            const avg = ((p + c + l + m) / 4) * 10;
+            document.getElementById('pclmResult').textContent = Math.round(avg) + '%';
+        }
+        function showTransitions() {
+            const cat = document.getElementById('transitionCategory').value;
+            const transitions = {
+                addition: 'Furthermore, Moreover, In addition, Additionally, Also, Besides, What is more, Not only... but also',
+                contrast: 'However, Nevertheless, On the other hand, Conversely, In contrast, Although, Despite, Yet, While',
+                cause: 'Therefore, Consequently, As a result, Thus, Hence, Because of this, For this reason, Accordingly',
+                sequence: 'Firstly, Secondly, Next, Then, Subsequently, Following this, Finally, In conclusion',
+                conclusion: 'In conclusion, To summarise, Ultimately, In essence, To conclude, All things considered, On balance',
+                emphasis: 'Indeed, In fact, Significantly, Notably, Crucially, Most importantly, Above all, It is worth noting'
+            };
+            document.getElementById('transitionsList').innerHTML = transitions[cat] ? transitions[cat].split(', ').map(t => `<span style="display:inline-block; background:var(--bg-tertiary); padding:0.25rem 0.5rem; border-radius:4px; margin:0.25rem;">${t}</span>`).join('') : '';
+        }
+        // Initialize transition words on page load
+        document.addEventListener('DOMContentLoaded', () => { showTransitions(); });
 
         // ==================== FORMULAS ====================
         function initFormulas() { renderFormulas('all'); document.querySelectorAll('.formula-cat-btn').forEach(btn => { btn.addEventListener('click', () => { document.querySelectorAll('.formula-cat-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); renderFormulas(btn.dataset.category); }); }); }
@@ -1689,162 +1845,136 @@
 
         // ==================== MIND MAPS ====================
         const mindmapData = {
-            atomic: {
-                center: { label: 'Atomic Structure', color: '#00d4ff' },
+            poetry: {
+                center: { label: 'Poetry Analysis', color: '#00d4ff' },
                 nodes: [
-                    { id: 'subatomic', label: 'Subatomic Particles', color: '#ff006e', desc: 'Atoms are made of protons (positive, in nucleus), neutrons (neutral, in nucleus), and electrons (negative, orbiting nucleus).' },
-                    { id: 'protons', label: 'Protons (+)', color: '#ff006e', parent: 'subatomic', desc: 'Positive charge, mass ≈ 1 amu, found in nucleus. Number of protons = atomic number.' },
-                    { id: 'neutrons', label: 'Neutrons (0)', color: '#ff006e', parent: 'subatomic', desc: 'No charge, mass ≈ 1 amu, found in nucleus. Different neutrons = isotopes.' },
-                    { id: 'electrons', label: 'Electrons (-)', color: '#ff006e', parent: 'subatomic', desc: 'Negative charge, mass ≈ 1/1836 amu, orbit nucleus in shells/orbitals.' },
-                    { id: 'numbers', label: 'Atomic Numbers', color: '#ffbe0b', desc: 'Atomic number (Z) = protons. Mass number (A) = protons + neutrons.' },
-                    { id: 'isotopes', label: 'Isotopes', color: '#ffbe0b', parent: 'numbers', desc: 'Same element, same protons, different neutrons. Same chemical properties, different physical properties.' },
-                    { id: 'config', label: 'Electron Config', color: '#00ff88', desc: 'Arrangement of electrons in energy levels and orbitals around the nucleus.' },
-                    { id: 'shells', label: 'Energy Levels', color: '#00ff88', parent: 'config', desc: 'Shells hold max 2n² electrons: 1st=2, 2nd=8, 3rd=18, 4th=32.' },
-                    { id: 'orbitals', label: 'Orbitals (s,p,d,f)', color: '#00ff88', parent: 'config', desc: 's=2, p=6, d=10, f=14 electrons. Fill order: 1s→2s→2p→3s→3p→4s→3d...' },
-                    { id: 'aufbau', label: 'Aufbau Principle', color: '#8338ec', parent: 'config', desc: 'Electrons fill lowest energy orbitals first.' },
-                    { id: 'hund', label: "Hund's Rule", color: '#8338ec', parent: 'config', desc: 'Electrons occupy orbitals singly before pairing (same spin).' },
-                    { id: 'pauli', label: 'Pauli Exclusion', color: '#8338ec', parent: 'config', desc: 'No two electrons can have the same four quantum numbers.' }
+                    { id: 'techniques', label: 'Poetic Techniques', color: '#ff006e', desc: 'Literary devices used by poets to create meaning and effect.' },
+                    { id: 'metaphor', label: 'Metaphor', color: '#ff006e', parent: 'techniques', desc: 'Direct comparison without using like/as.' },
+                    { id: 'simile', label: 'Simile', color: '#ff006e', parent: 'techniques', desc: 'Comparison using like or as.' },
+                    { id: 'imagery', label: 'Imagery', color: '#ff006e', parent: 'techniques', desc: 'Language appealing to the senses.' },
+                    { id: 'structure', label: 'Structure', color: '#00ff88', desc: 'How the poem is organised and arranged.' },
+                    { id: 'stanza', label: 'Stanza Form', color: '#00ff88', parent: 'structure', desc: 'Grouping of lines: couplet, quatrain, etc.' },
+                    { id: 'rhyme', label: 'Rhyme Scheme', color: '#00ff88', parent: 'structure', desc: 'Pattern of rhyming words (ABAB, ABBA).' },
+                    { id: 'sound', label: 'Sound Devices', color: '#ffbe0b', desc: 'Techniques that create auditory effects.' },
+                    { id: 'alliteration', label: 'Alliteration', color: '#ffbe0b', parent: 'sound', desc: 'Repeated consonant sounds.' },
+                    { id: 'assonance', label: 'Assonance', color: '#ffbe0b', parent: 'sound', desc: 'Repeated vowel sounds.' },
+                    { id: 'analysis', label: 'Analysis Approach', color: '#8338ec', desc: 'SMILE: Structure, Meaning, Imagery, Language, Effect.' },
+                    { id: 'theme', label: 'Theme', color: '#8338ec', parent: 'analysis', desc: 'Central idea or message of the poem.' }
                 ]
             },
-            bonding: {
-                center: { label: 'Chemical Bonding', color: '#00d4ff' },
+            shakespeare: {
+                center: { label: 'Shakespeare', color: '#00d4ff' },
                 nodes: [
-                    { id: 'ionic', label: 'Ionic Bonding', color: '#ff006e', desc: 'Transfer of electrons from metal to non-metal. Forms ions that attract electrostatically.' },
-                    { id: 'ionic-props', label: 'Ionic Properties', color: '#ff006e', parent: 'ionic', desc: 'High m.p./b.p., conduct when molten/dissolved, crystalline lattice, brittle.' },
-                    { id: 'covalent', label: 'Covalent Bonding', color: '#00ff88', desc: 'Sharing of electron pairs between non-metal atoms.' },
-                    { id: 'polar', label: 'Polar Covalent', color: '#00ff88', parent: 'covalent', desc: 'Unequal sharing due to electronegativity difference (0.5-1.7).' },
-                    { id: 'nonpolar', label: 'Non-polar', color: '#00ff88', parent: 'covalent', desc: 'Equal sharing, electronegativity difference < 0.5.' },
-                    { id: 'dative', label: 'Dative/Coordinate', color: '#00ff88', parent: 'covalent', desc: 'Both electrons from same atom (e.g., NH₄⁺, H₃O⁺).' },
-                    { id: 'metallic', label: 'Metallic Bonding', color: '#ffbe0b', desc: 'Sea of delocalised electrons around positive metal ions.' },
-                    { id: 'metal-props', label: 'Metallic Properties', color: '#ffbe0b', parent: 'metallic', desc: 'Good conductors, malleable, ductile, lustrous.' },
-                    { id: 'electro', label: 'Electronegativity', color: '#8338ec', desc: 'Ability to attract shared electrons. Increases across period, decreases down group.' },
-                    { id: 'shapes', label: 'Molecular Shapes', color: '#8338ec', desc: 'VSEPR theory: shapes determined by electron pair repulsion.' },
-                    { id: 'linear', label: 'Linear (180°)', color: '#8338ec', parent: 'shapes', desc: '2 bonding pairs, no lone pairs (e.g., CO₂, BeCl₂).' },
-                    { id: 'bent', label: 'Bent/V-shape', color: '#8338ec', parent: 'shapes', desc: '2 bonding pairs + lone pairs (e.g., H₂O=104.5°, SO₂).' },
-                    { id: 'tetrahedral', label: 'Tetrahedral (109.5°)', color: '#8338ec', parent: 'shapes', desc: '4 bonding pairs, no lone pairs (e.g., CH₄, CCl₄).' }
+                    { id: 'tragedy', label: 'Tragedy Elements', color: '#ff006e', desc: 'Features of Shakespearean tragedy.' },
+                    { id: 'hero', label: 'Tragic Hero', color: '#ff006e', parent: 'tragedy', desc: 'Protagonist of high status with fatal flaw.' },
+                    { id: 'hamartia', label: 'Hamartia', color: '#ff006e', parent: 'tragedy', desc: 'The fatal flaw causing downfall.' },
+                    { id: 'catharsis', label: 'Catharsis', color: '#ff006e', parent: 'tragedy', desc: 'Emotional release for the audience.' },
+                    { id: 'techniques', label: 'Dramatic Techniques', color: '#00ff88', desc: 'Stagecraft and dramatic devices used.' },
+                    { id: 'soliloquy', label: 'Soliloquy', color: '#00ff88', parent: 'techniques', desc: 'Character speaks thoughts aloud alone.' },
+                    { id: 'aside', label: 'Aside', color: '#00ff88', parent: 'techniques', desc: 'Remark heard by audience not characters.' },
+                    { id: 'irony', label: 'Dramatic Irony', color: '#00ff88', parent: 'techniques', desc: 'Audience knows more than characters.' },
+                    { id: 'language', label: 'Language Features', color: '#8338ec', desc: 'Distinctive aspects of Shakespeare\'s language.' },
+                    { id: 'iambic', label: 'Iambic Pentameter', color: '#8338ec', parent: 'language', desc: 'Five pairs of unstressed/stressed syllables.' },
+                    { id: 'prose', label: 'Prose vs Verse', color: '#8338ec', parent: 'language', desc: 'Prose for common folk, verse for nobility.' }
                 ]
             },
-            stoichiometry: {
-                center: { label: 'Stoichiometry', color: '#00d4ff' },
+            comparative: {
+                center: { label: 'Comparative Study', color: '#00d4ff' },
                 nodes: [
-                    { id: 'mole', label: 'The Mole', color: '#ff006e', desc: 'SI unit for amount. 1 mole = 6.022 × 10²³ particles (Avogadro\'s number).' },
-                    { id: 'molar-mass', label: 'Molar Mass', color: '#ff006e', parent: 'mole', desc: 'Mass of 1 mole in g/mol. Equals relative atomic/molecular mass in grams.' },
-                    { id: 'n-formula', label: 'n = m/M', color: '#ff006e', parent: 'mole', desc: 'Moles = mass ÷ molar mass. Rearrange: m = nM, M = m/n.' },
-                    { id: 'concentration', label: 'Concentration', color: '#00ff88', desc: 'Amount per unit volume. C = n/V (mol/L or M).' },
-                    { id: 'dilution', label: 'Dilution C₁V₁=C₂V₂', color: '#00ff88', parent: 'concentration', desc: 'Moles before = moles after dilution.' },
-                    { id: 'gases', label: 'Molar Volume', color: '#ffbe0b', desc: 'At STP (0°C, 1atm): 1 mole of any gas = 22.4 L.' },
-                    { id: 'calcs', label: 'Stoich Calculations', color: '#8338ec', desc: 'Use balanced equation ratios to convert between substances.' },
-                    { id: 'limiting', label: 'Limiting Reagent', color: '#8338ec', parent: 'calcs', desc: 'Reactant completely consumed first, limits product formed.' },
-                    { id: 'excess', label: 'Excess Reagent', color: '#8338ec', parent: 'calcs', desc: 'Reactant left over after reaction completes.' },
-                    { id: 'yield', label: 'Percentage Yield', color: '#8338ec', parent: 'calcs', desc: '(Actual yield ÷ Theoretical yield) × 100%.' },
-                    { id: 'atom-econ', label: 'Atom Economy', color: '#8338ec', parent: 'calcs', desc: '(Mr of desired product ÷ Mr of all products) × 100%.' }
+                    { id: 'modes', label: 'Modes of Comparison', color: '#ff006e', desc: 'Three lenses through which to compare texts.' },
+                    { id: 'theme', label: 'Theme/Issue', color: '#ff006e', parent: 'modes', desc: 'Compare how texts explore same themes.' },
+                    { id: 'genre', label: 'Literary Genre', color: '#ff006e', parent: 'modes', desc: 'How texts use genre conventions.' },
+                    { id: 'vision', label: 'General Vision', color: '#ff006e', parent: 'modes', desc: 'Optimistic, pessimistic, or balanced outlook.' },
+                    { id: 'structure', label: 'Essay Structure', color: '#00ff88', desc: 'How to organise comparative responses.' },
+                    { id: 'linking', label: 'Constant Linking', color: '#00ff88', parent: 'structure', desc: 'Never analyse texts in isolation.' },
+                    { id: 'evidence', label: 'Evidence', color: '#00ff88', parent: 'structure', desc: 'Quotes and examples from all three texts.' },
+                    { id: 'texts', label: 'Text Types', color: '#8338ec', desc: 'Types of texts for comparative study.' },
+                    { id: 'novel', label: 'Novel', color: '#8338ec', parent: 'texts', desc: 'Extended prose narrative fiction.' },
+                    { id: 'play', label: 'Play/Drama', color: '#8338ec', parent: 'texts', desc: 'Written for performance on stage.' },
+                    { id: 'film', label: 'Film', color: '#8338ec', parent: 'texts', desc: 'Visual medium with cinematic techniques.' }
                 ]
             },
-            organic: {
-                center: { label: 'Organic Chemistry', color: '#00d4ff' },
+            novel: {
+                center: { label: 'Single Text (Novel)', color: '#00d4ff' },
                 nodes: [
-                    { id: 'hydrocarbons', label: 'Hydrocarbons', color: '#ff006e', desc: 'Compounds containing only carbon and hydrogen atoms.' },
-                    { id: 'alkanes', label: 'Alkanes CₙH₂ₙ₊₂', color: '#ff006e', parent: 'hydrocarbons', desc: 'Saturated, single bonds only. Undergo substitution reactions.' },
-                    { id: 'alkenes', label: 'Alkenes CₙH₂ₙ', color: '#ff006e', parent: 'hydrocarbons', desc: 'Unsaturated, C=C double bond. Undergo addition reactions.' },
-                    { id: 'alkynes', label: 'Alkynes CₙH₂ₙ₋₂', color: '#ff006e', parent: 'hydrocarbons', desc: 'Unsaturated, C≡C triple bond.' },
-                    { id: 'functional', label: 'Functional Groups', color: '#00ff88', desc: 'Groups of atoms that determine chemical properties.' },
-                    { id: 'alcohols', label: 'Alcohols -OH', color: '#00ff88', parent: 'functional', desc: 'Hydroxyl group. Primary, secondary, tertiary. Oxidation → aldehydes/ketones/acids.' },
-                    { id: 'aldehydes', label: 'Aldehydes -CHO', color: '#00ff88', parent: 'functional', desc: 'Terminal carbonyl. Oxidise to carboxylic acids.' },
-                    { id: 'ketones', label: 'Ketones C=O', color: '#00ff88', parent: 'functional', desc: 'Internal carbonyl. Resistant to oxidation.' },
-                    { id: 'acids', label: 'Carboxylic -COOH', color: '#00ff88', parent: 'functional', desc: 'Weak acids. React with alcohols → esters.' },
-                    { id: 'esters', label: 'Esters -COO-', color: '#00ff88', parent: 'functional', desc: 'Sweet smells. Esterification: acid + alcohol → ester + water.' },
-                    { id: 'reactions', label: 'Reaction Types', color: '#ffbe0b', desc: 'Addition, substitution, elimination, condensation, oxidation.' },
-                    { id: 'polymers', label: 'Polymers', color: '#8338ec', desc: 'Large molecules from repeating monomer units.' },
-                    { id: 'addition-poly', label: 'Addition Polymers', color: '#8338ec', parent: 'polymers', desc: 'From alkenes (e.g., polyethene). No by-products.' },
-                    { id: 'condensation-poly', label: 'Condensation Polymers', color: '#8338ec', parent: 'polymers', desc: 'Release small molecules (e.g., nylon, polyester).' }
+                    { id: 'narrative', label: 'Narrative Voice', color: '#ff006e', desc: 'Who tells the story and how.' },
+                    { id: 'first', label: 'First Person', color: '#ff006e', parent: 'narrative', desc: 'I/we narrator, limited perspective.' },
+                    { id: 'third', label: 'Third Person', color: '#ff006e', parent: 'narrative', desc: 'He/she, can be limited or omniscient.' },
+                    { id: 'unreliable', label: 'Unreliable Narrator', color: '#ff006e', parent: 'narrative', desc: 'Narrator whose account is questionable.' },
+                    { id: 'elements', label: 'Novel Elements', color: '#00ff88', desc: 'Key components of prose fiction.' },
+                    { id: 'plot', label: 'Plot Structure', color: '#00ff88', parent: 'elements', desc: 'Exposition, rising action, climax, resolution.' },
+                    { id: 'character', label: 'Characterisation', color: '#00ff88', parent: 'elements', desc: 'How characters are developed.' },
+                    { id: 'setting', label: 'Setting', color: '#00ff88', parent: 'elements', desc: 'Time, place, atmosphere.' },
+                    { id: 'techniques', label: 'Techniques', color: '#8338ec', desc: 'Literary devices in prose.' },
+                    { id: 'foreshadow', label: 'Foreshadowing', color: '#8338ec', parent: 'techniques', desc: 'Hints about future events.' },
+                    { id: 'flashback', label: 'Flashback', color: '#8338ec', parent: 'techniques', desc: 'Scene showing past events.' }
                 ]
             },
-            acids: {
-                center: { label: 'Acids & Bases', color: '#00d4ff' },
+            composing: {
+                center: { label: 'Composing', color: '#00d4ff' },
                 nodes: [
-                    { id: 'definitions', label: 'Definitions', color: '#ff006e', desc: 'Arrhenius: H⁺/OH⁻ producers. Brønsted-Lowry: H⁺ donor/acceptor.' },
-                    { id: 'acid-def', label: 'Acid = H⁺ donor', color: '#ff006e', parent: 'definitions', desc: 'Donates protons. Has conjugate base.' },
-                    { id: 'base-def', label: 'Base = H⁺ acceptor', color: '#ff006e', parent: 'definitions', desc: 'Accepts protons. Has conjugate acid.' },
-                    { id: 'ph-scale', label: 'pH Scale', color: '#00ff88', desc: 'pH = -log₁₀[H⁺]. Range 0-14. pH 7 = neutral at 25°C.' },
-                    { id: 'acidic', label: 'Acidic: pH < 7', color: '#00ff88', parent: 'ph-scale', desc: 'Higher [H⁺] than pure water.' },
-                    { id: 'basic', label: 'Basic: pH > 7', color: '#00ff88', parent: 'ph-scale', desc: 'Higher [OH⁻] than pure water. pOH = 14 - pH.' },
-                    { id: 'strong-weak', label: 'Strong vs Weak', color: '#ffbe0b', desc: 'Strong = fully dissociate. Weak = partially dissociate.' },
-                    { id: 'strong-acids', label: 'Strong Acids', color: '#ffbe0b', parent: 'strong-weak', desc: 'HCl, H₂SO₄, HNO₃ - fully ionise in water.' },
-                    { id: 'weak-acids', label: 'Weak Acids', color: '#ffbe0b', parent: 'strong-weak', desc: 'CH₃COOH, H₂CO₃ - equilibrium with undissociated form.' },
-                    { id: 'neutralisation', label: 'Neutralisation', color: '#8338ec', desc: 'Acid + Base → Salt + Water. Exothermic reaction.' },
-                    { id: 'titration', label: 'Titrations', color: '#8338ec', parent: 'neutralisation', desc: 'Determine unknown concentration using known solution.' },
-                    { id: 'indicators', label: 'Indicators', color: '#8338ec', parent: 'titration', desc: 'Phenolphthalein (8.2-10), methyl orange (3.1-4.4).' },
-                    { id: 'buffers', label: 'Buffer Solutions', color: '#8338ec', desc: 'Resist pH changes. Weak acid + conjugate base.' }
+                    { id: 'types', label: 'Essay Types', color: '#ff006e', desc: 'Different forms of composition.' },
+                    { id: 'personal', label: 'Personal Essay', color: '#ff006e', parent: 'types', desc: 'Reflective, first person, insight.' },
+                    { id: 'discursive', label: 'Discursive', color: '#ff006e', parent: 'types', desc: 'Balanced argument on an issue.' },
+                    { id: 'narrative', label: 'Narrative', color: '#ff006e', parent: 'types', desc: 'Story with plot and characters.' },
+                    { id: 'speech', label: 'Speech', color: '#ff006e', parent: 'types', desc: 'Persuasive, direct address.' },
+                    { id: 'structure', label: 'Structure', color: '#00ff88', desc: 'Organisation of your writing.' },
+                    { id: 'intro', label: 'Introduction', color: '#00ff88', parent: 'structure', desc: 'Hook, context, thesis.' },
+                    { id: 'body', label: 'Body Paragraphs', color: '#00ff88', parent: 'structure', desc: 'PEEL structure, development.' },
+                    { id: 'conclusion', label: 'Conclusion', color: '#00ff88', parent: 'structure', desc: 'Summarise, synthesise, significance.' },
+                    { id: 'language', label: 'Language & Style', color: '#8338ec', desc: 'Register, tone, vocabulary choices.' }
                 ]
             },
-            redox: {
-                center: { label: 'Electrochemistry', color: '#00d4ff' },
+            comprehension: {
+                center: { label: 'Comprehension', color: '#00d4ff' },
                 nodes: [
-                    { id: 'oxidation', label: 'Oxidation', color: '#ff006e', desc: 'Loss of electrons. Gain of oxygen. Increase in oxidation state.' },
-                    { id: 'reduction', label: 'Reduction', color: '#00ff88', desc: 'Gain of electrons. Loss of oxygen. Decrease in oxidation state.' },
-                    { id: 'oilrig', label: 'OIL RIG', color: '#ffbe0b', desc: 'Oxidation Is Loss, Reduction Is Gain (of electrons).' },
-                    { id: 'ox-states', label: 'Oxidation States', color: '#ffbe0b', desc: 'Rules: Elements=0, O=-2 (usually), H=+1 (usually), sum=charge.' },
-                    { id: 'agents', label: 'Redox Agents', color: '#8338ec', desc: 'Oxidising agent gets reduced. Reducing agent gets oxidised.' },
-                    { id: 'electrolysis', label: 'Electrolysis', color: '#8338ec', desc: 'Using electricity to drive non-spontaneous reactions.' },
-                    { id: 'anode', label: 'Anode (+)', color: '#8338ec', parent: 'electrolysis', desc: 'Oxidation occurs. Anions lose electrons.' },
-                    { id: 'cathode', label: 'Cathode (-)', color: '#8338ec', parent: 'electrolysis', desc: 'Reduction occurs. Cations gain electrons.' },
-                    { id: 'faraday', label: "Faraday's Laws", color: '#8338ec', parent: 'electrolysis', desc: 'Q = It. Mass ∝ charge passed. m = (Q×M)/(n×F).' },
-                    { id: 'cells', label: 'Electrochemical Cells', color: '#ff006e', desc: 'Convert chemical energy to electrical (galvanic) or vice versa.' },
-                    { id: 'galvanic', label: 'Galvanic Cells', color: '#ff006e', parent: 'cells', desc: 'Spontaneous redox produces electricity. Anode negative.' }
+                    { id: 'textTypes', label: 'Text Types', color: '#ff006e', desc: 'Types of texts you may encounter.' },
+                    { id: 'narrative', label: 'Narrative', color: '#ff006e', parent: 'textTypes', desc: 'Stories, biographies, memoirs.' },
+                    { id: 'argument', label: 'Argumentative', color: '#ff006e', parent: 'textTypes', desc: 'Opinion pieces, editorials.' },
+                    { id: 'visual', label: 'Visual', color: '#ff006e', parent: 'textTypes', desc: 'Images, advertisements, posters.' },
+                    { id: 'skills', label: 'Key Skills', color: '#00ff88', desc: 'Abilities needed for comprehension.' },
+                    { id: 'inference', label: 'Inference', color: '#00ff88', parent: 'skills', desc: 'Reading between the lines.' },
+                    { id: 'analysis', label: 'Analysis', color: '#00ff88', parent: 'skills', desc: 'Examining language and effect.' },
+                    { id: 'features', label: 'Language Features', color: '#8338ec', desc: 'What to identify and discuss.' },
+                    { id: 'tone', label: 'Tone', color: '#8338ec', parent: 'features', desc: 'Writer\'s attitude.' },
+                    { id: 'register', label: 'Register', color: '#8338ec', parent: 'features', desc: 'Level of formality.' }
                 ]
             },
-            rates: {
-                center: { label: 'Rates & Equilibrium', color: '#00d4ff' },
+            persuasion: {
+                center: { label: 'Language of Argument', color: '#00d4ff' },
                 nodes: [
-                    { id: 'rate', label: 'Rate of Reaction', color: '#ff006e', desc: 'Change in concentration per unit time. Rate = Δ[conc]/Δt.' },
-                    { id: 'factors', label: 'Factors Affecting Rate', color: '#00ff88', desc: 'Temperature, concentration, surface area, catalyst, pressure.' },
-                    { id: 'temp', label: 'Temperature ↑', color: '#00ff88', parent: 'factors', desc: 'More kinetic energy, more frequent/energetic collisions.' },
-                    { id: 'conc', label: 'Concentration ↑', color: '#00ff88', parent: 'factors', desc: 'More particles, more frequent collisions.' },
-                    { id: 'surface', label: 'Surface Area ↑', color: '#00ff88', parent: 'factors', desc: 'More exposed particles available for collision.' },
-                    { id: 'catalyst', label: 'Catalyst', color: '#00ff88', parent: 'factors', desc: 'Lowers activation energy, provides alternative pathway.' },
-                    { id: 'collision', label: 'Collision Theory', color: '#ffbe0b', desc: 'Particles must collide with correct orientation and E ≥ Eₐ.' },
-                    { id: 'activation', label: 'Activation Energy', color: '#ffbe0b', parent: 'collision', desc: 'Minimum energy required for reaction to occur.' },
-                    { id: 'equilibrium', label: 'Chemical Equilibrium', color: '#8338ec', desc: 'Dynamic: forward rate = reverse rate. No net change.' },
-                    { id: 'lechatelier', label: "Le Chatelier's", color: '#8338ec', parent: 'equilibrium', desc: 'System shifts to counteract any change imposed on it.' },
-                    { id: 'kc', label: 'Equilibrium Constant', color: '#8338ec', parent: 'equilibrium', desc: 'Kc = [products]ᵖ / [reactants]ʳ. Temperature dependent.' }
+                    { id: 'appeals', label: 'Rhetorical Appeals', color: '#ff006e', desc: 'Three modes of persuasion.' },
+                    { id: 'ethos', label: 'Ethos', color: '#ff006e', parent: 'appeals', desc: 'Appeal to credibility/ethics.' },
+                    { id: 'pathos', label: 'Pathos', color: '#ff006e', parent: 'appeals', desc: 'Appeal to emotion.' },
+                    { id: 'logos', label: 'Logos', color: '#ff006e', parent: 'appeals', desc: 'Appeal to logic/reason.' },
+                    { id: 'techniques', label: 'Techniques', color: '#00ff88', desc: 'Persuasive devices.' },
+                    { id: 'rhetorical', label: 'Rhetorical Question', color: '#00ff88', parent: 'techniques', desc: 'Question for effect.' },
+                    { id: 'repetition', label: 'Repetition', color: '#00ff88', parent: 'techniques', desc: 'Emphasis through repeating.' },
+                    { id: 'tricolon', label: 'Tricolon', color: '#00ff88', parent: 'techniques', desc: 'Rule of three.' },
+                    { id: 'structure', label: 'Argument Structure', color: '#8338ec', desc: 'How arguments are built.' },
+                    { id: 'claim', label: 'Claim', color: '#8338ec', parent: 'structure', desc: 'Main argument statement.' },
+                    { id: 'evidence', label: 'Evidence', color: '#8338ec', parent: 'structure', desc: 'Supporting facts and examples.' }
                 ]
             },
-            gases: {
-                center: { label: 'Gas Laws', color: '#00d4ff' },
+            drama: {
+                center: { label: 'Drama', color: '#00d4ff' },
                 nodes: [
-                    { id: 'ideal', label: 'Ideal Gas Equation', color: '#ff006e', desc: 'PV = nRT. R = 8.314 J/mol·K or 0.0821 L·atm/mol·K.' },
-                    { id: 'boyle', label: "Boyle's Law", color: '#00ff88', desc: 'P₁V₁ = P₂V₂ at constant T. P ∝ 1/V.' },
-                    { id: 'charles', label: "Charles's Law", color: '#00ff88', desc: 'V₁/T₁ = V₂/T₂ at constant P. V ∝ T (in Kelvin).' },
-                    { id: 'gaylussac', label: "Gay-Lussac's Law", color: '#00ff88', desc: 'P₁/T₁ = P₂/T₂ at constant V. P ∝ T.' },
-                    { id: 'avogadro', label: "Avogadro's Law", color: '#00ff88', desc: 'V ∝ n at constant T and P. Equal volumes = equal moles.' },
-                    { id: 'stp', label: 'STP Conditions', color: '#ffbe0b', desc: '0°C (273 K), 1 atm. Molar volume = 22.4 L/mol.' },
-                    { id: 'kinetic', label: 'Kinetic Theory', color: '#8338ec', desc: 'Assumptions about ideal gas behaviour.' },
-                    { id: 'random', label: 'Random Motion', color: '#8338ec', parent: 'kinetic', desc: 'Particles in constant random motion.' },
-                    { id: 'elastic', label: 'Elastic Collisions', color: '#8338ec', parent: 'kinetic', desc: 'No energy lost in collisions.' },
-                    { id: 'no-forces', label: 'No Intermolecular Forces', color: '#8338ec', parent: 'kinetic', desc: 'Particles don\'t attract or repel each other.' },
-                    { id: 'negligible', label: 'Negligible Volume', color: '#8338ec', parent: 'kinetic', desc: 'Particle volume << container volume.' }
-                ]
-            },
-            thermo: {
-                center: { label: 'Thermochemistry', color: '#00d4ff' },
-                nodes: [
-                    { id: 'enthalpy', label: 'Enthalpy (H)', color: '#ff006e', desc: 'Heat content at constant pressure. ΔH = H(products) - H(reactants).' },
-                    { id: 'exothermic', label: 'Exothermic ΔH < 0', color: '#ff006e', parent: 'enthalpy', desc: 'Heat released to surroundings. Products lower energy.' },
-                    { id: 'endothermic', label: 'Endothermic ΔH > 0', color: '#ff006e', parent: 'enthalpy', desc: 'Heat absorbed from surroundings. Products higher energy.' },
-                    { id: 'standard', label: 'Standard Conditions', color: '#00ff88', desc: '298 K (25°C), 1 atm, 1 M solutions. Symbol: °' },
-                    { id: 'formation', label: 'ΔHf° Formation', color: '#00ff88', parent: 'standard', desc: 'Enthalpy change forming 1 mole from elements.' },
-                    { id: 'combustion', label: 'ΔHc° Combustion', color: '#00ff88', parent: 'standard', desc: 'Complete burning of 1 mole in excess oxygen.' },
-                    { id: 'hess', label: "Hess's Law", color: '#ffbe0b', desc: 'Total ΔH is independent of route taken.' },
-                    { id: 'hess-calc', label: 'ΔH = ΣΔHf(prod) - ΣΔHf(react)', color: '#ffbe0b', parent: 'hess', desc: 'Calculate using formation enthalpies.' },
-                    { id: 'bonds', label: 'Bond Energies', color: '#8338ec', desc: 'Energy to break 1 mole of bonds in gaseous molecules.' },
-                    { id: 'bond-calc', label: 'ΔH = Σ(broken) - Σ(formed)', color: '#8338ec', parent: 'bonds', desc: 'Breaking = positive, forming = negative.' },
-                    { id: 'calorimetry', label: 'Calorimetry', color: '#8338ec', desc: 'q = mcΔT. Measure heat changes experimentally.' }
+                    { id: 'elements', label: 'Drama Elements', color: '#ff006e', desc: 'Key components of plays.' },
+                    { id: 'dialogue', label: 'Dialogue', color: '#ff006e', parent: 'elements', desc: 'Speech between characters.' },
+                    { id: 'stage', label: 'Stage Directions', color: '#ff006e', parent: 'elements', desc: 'Instructions for performance.' },
+                    { id: 'conflict', label: 'Conflict', color: '#ff006e', parent: 'elements', desc: 'Central tension driving plot.' },
+                    { id: 'techniques', label: 'Dramatic Techniques', color: '#00ff88', desc: 'Devices used in drama.' },
+                    { id: 'tension', label: 'Tension', color: '#00ff88', parent: 'techniques', desc: 'Building suspense and anticipation.' },
+                    { id: 'subtext', label: 'Subtext', color: '#00ff88', parent: 'techniques', desc: 'Meaning beneath the dialogue.' },
+                    { id: 'analysis', label: 'Analysing Drama', color: '#8338ec', desc: 'Approach to drama questions.' },
+                    { id: 'character', label: 'Character Study', color: '#8338ec', parent: 'analysis', desc: 'Motivation, development, relationships.' },
+                    { id: 'themes', label: 'Themes', color: '#8338ec', parent: 'analysis', desc: 'Central ideas explored.' }
                 ]
             }
         };
 
         function initMindMaps() {
-            renderMindMap('atomic');
+            renderMindMap('poetry');
         }
 
         function renderMindMap(topicId) {
@@ -2065,7 +2195,7 @@
         let userProgress = {};
         
         function loadProgress() {
-            userProgress = JSON.parse(localStorage.getItem('chemProgress') || '{}');
+            userProgress = JSON.parse(localStorage.getItem('englishProgress') || '{}');
             // Update topics array with saved progress
             topics.forEach(topic => {
                 if (userProgress[topic.id]) {
@@ -2079,7 +2209,7 @@
             if (!userProgress[topicId]) userProgress[topicId] = {};
             userProgress[topicId].progress = progressValue;
             userProgress[topicId].lastViewed = Date.now();
-            localStorage.setItem('chemProgress', JSON.stringify(userProgress));
+            localStorage.setItem('englishProgress', JSON.stringify(userProgress));
             
             // Update topic in array
             const topic = topics.find(t => t.id === topicId);
@@ -2115,7 +2245,7 @@
 
         // ==================== EXAM COUNTDOWN ====================
         function initExamCountdown() {
-            // LC Chemistry typically in June
+            // LC English typically in June
             const examDate = new Date('2025-06-11'); // Approximate LC date
             const today = new Date();
             const diffTime = examDate - today;
@@ -2182,104 +2312,79 @@
 
         // ==================== DATA TABLES ====================
         const dataTables = {
-            electrochemical: {
-                title: 'Standard Electrode Potentials (E°)',
-                headers: ['Half-Reaction', 'E° (V)'],
+            examStructure: {
+                title: 'LC English Exam Structure',
+                headers: ['Paper', 'Section', 'Content', 'Marks', 'Time'],
                 data: [
-                    ['Li⁺ + e⁻ → Li', '-3.04'],
-                    ['K⁺ + e⁻ → K', '-2.93'],
-                    ['Ca²⁺ + 2e⁻ → Ca', '-2.87'],
-                    ['Na⁺ + e⁻ → Na', '-2.71'],
-                    ['Mg²⁺ + 2e⁻ → Mg', '-2.37'],
-                    ['Al³⁺ + 3e⁻ → Al', '-1.66'],
-                    ['Zn²⁺ + 2e⁻ → Zn', '-0.76'],
-                    ['Fe²⁺ + 2e⁻ → Fe', '-0.44'],
-                    ['Ni²⁺ + 2e⁻ → Ni', '-0.26'],
-                    ['Sn²⁺ + 2e⁻ → Sn', '-0.14'],
-                    ['Pb²⁺ + 2e⁻ → Pb', '-0.13'],
-                    ['2H⁺ + 2e⁻ → H₂', '0.00'],
-                    ['Cu²⁺ + 2e⁻ → Cu', '+0.34'],
-                    ['I₂ + 2e⁻ → 2I⁻', '+0.54'],
-                    ['Ag⁺ + e⁻ → Ag', '+0.80'],
-                    ['Br₂ + 2e⁻ → 2Br⁻', '+1.07'],
-                    ['Cl₂ + 2e⁻ → 2Cl⁻', '+1.36'],
-                    ['Au³⁺ + 3e⁻ → Au', '+1.50'],
-                    ['F₂ + 2e⁻ → 2F⁻', '+2.87']
+                    ['Paper 1', 'Question A', 'Comprehension (2 texts)', '50', '~60 min'],
+                    ['Paper 1', 'Question B', 'Composing (1 essay)', '50', '~60 min'],
+                    ['Paper 1', 'Total', '170 marks (scaled to 200)', '100', '2h 50min'],
+                    ['Paper 2', 'Single Text', 'Novel or Drama study', '60', '~45 min'],
+                    ['Paper 2', 'Comparative Study', 'Compare 3 texts', '70', '~60 min'],
+                    ['Paper 2', 'Poetry', 'Prescribed poetry', '70', '~55 min'],
+                    ['Paper 2', 'Total', 'Choose Shakespeare OR Unseen Poetry', '200', '3h 20min']
                 ],
-                note: 'More positive E° = stronger oxidising agent. More negative E° = stronger reducing agent.'
+                note: 'Total marks: Paper 1 (200) + Paper 2 (200) = 400 marks. Both papers are equally weighted.'
             },
-            bondEnergies: {
-                title: 'Average Bond Energies',
-                headers: ['Bond', 'Energy (kJ/mol)', 'Bond', 'Energy (kJ/mol)'],
+            markingSchemes: {
+                title: 'Marking Criteria (PCLM)',
+                headers: ['Category', 'Description', 'Weight', 'What Examiners Look For'],
                 data: [
-                    ['H-H', '436', 'C-C', '347'],
-                    ['H-C', '413', 'C=C', '612'],
-                    ['H-N', '391', 'C≡C', '838'],
-                    ['H-O', '463', 'C-O', '358'],
-                    ['H-F', '568', 'C=O', '805'],
-                    ['H-Cl', '432', 'C-N', '286'],
-                    ['H-Br', '366', 'C≡N', '890'],
-                    ['H-I', '298', 'N-N', '158'],
-                    ['O-O', '146', 'N=N', '418'],
-                    ['O=O', '498', 'N≡N', '945'],
-                    ['Cl-Cl', '243', 'C-Cl', '346'],
-                    ['Br-Br', '193', 'C-Br', '290']
+                    ['P - Purpose', 'Relevance to the task', '30%', 'Answering the question, staying on topic'],
+                    ['C - Coherence', 'Organisation and structure', '30%', 'Clear paragraphs, logical flow, linking'],
+                    ['L - Language', 'Expression and vocabulary', '30%', 'Varied vocabulary, appropriate register'],
+                    ['M - Mechanics', 'Grammar and spelling', '10%', 'Accurate punctuation, spelling, syntax'],
+                    ['---', '---', '---', '---'],
+                    ['A Grade', 'Excellent across all criteria', '90%+', 'Original ideas, sophisticated expression'],
+                    ['B Grade', 'Very good, minor weaknesses', '75-89%', 'Strong analysis, good control'],
+                    ['C Grade', 'Good, competent work', '60-74%', 'Adequate engagement, clear expression']
                 ],
-                note: 'Bond breaking is endothermic (+). Bond forming is exothermic (-).'
+                note: 'PCLM is applied to all writing tasks. Always address the question (Purpose) first, then structure your response.'
             },
-            enthalpies: {
-                title: 'Standard Enthalpies of Formation (ΔHf°)',
-                headers: ['Compound', 'ΔHf° (kJ/mol)', 'Compound', 'ΔHf° (kJ/mol)'],
+            essayTypes: {
+                title: 'Composing - Essay Types (Paper 1 QB)',
+                headers: ['Type', 'Features', 'Register', 'Tips'],
                 data: [
-                    ['H₂O(l)', '-286', 'CO₂(g)', '-394'],
-                    ['H₂O(g)', '-242', 'CO(g)', '-111'],
-                    ['HCl(g)', '-92', 'CH₄(g)', '-75'],
-                    ['HBr(g)', '-36', 'C₂H₆(g)', '-85'],
-                    ['NH₃(g)', '-46', 'C₂H₄(g)', '+52'],
-                    ['NO(g)', '+90', 'C₂H₂(g)', '+227'],
-                    ['NO₂(g)', '+34', 'CH₃OH(l)', '-239'],
-                    ['N₂O(g)', '+82', 'C₂H₅OH(l)', '-278'],
-                    ['SO₂(g)', '-297', 'C₆H₁₂O₆(s)', '-1271'],
-                    ['SO₃(g)', '-396', 'NaCl(s)', '-411']
+                    ['Personal Essay', 'Reflective, introspective, uses anecdote', 'First person, intimate', 'Show personal growth/insight'],
+                    ['Discursive Essay', 'Explores both sides of an issue', 'Formal, balanced', 'Strong argument with counter-arguments'],
+                    ['Narrative', 'Story with plot, characters, setting', 'Varies with story', 'Show don\'t tell, use dialogue'],
+                    ['Speech', 'Persuasive, direct address, rhetorical', 'Formal but engaging', 'Use rhetorical questions, repetition'],
+                    ['Article', 'Journalistic, headline, subheadings', 'Semi-formal', 'Catchy opening, clear structure'],
+                    ['Blog/Diary', 'Personal, dated entries, informal', 'Conversational', 'Voice, personality, reflection'],
+                    ['Letter', 'Formal or informal, clear purpose', 'Depends on recipient', 'Appropriate opening/closing']
                 ],
-                note: 'Elements in standard states have ΔHf° = 0 by definition.'
+                note: 'Read the question carefully - it will specify the type. Marks are awarded for appropriate style and register.'
             },
-            constants: {
-                title: 'Important Constants & Values',
-                headers: ['Constant', 'Value'],
+            poets: {
+                title: 'Prescribed Poets (2024-2026)',
+                headers: ['Poet', 'Key Themes', 'Style Features', 'Popular Poems'],
                 data: [
-                    ['Avogadro constant (Nₐ)', '6.022 × 10²³ mol⁻¹'],
-                    ['Gas constant (R)', '8.314 J mol⁻¹ K⁻¹'],
-                    ['Gas constant (R)', '0.0821 L atm mol⁻¹ K⁻¹'],
-                    ['Faraday constant (F)', '96,500 C mol⁻¹'],
-                    ['Molar volume at STP', '22.4 L mol⁻¹'],
-                    ['Standard pressure', '101.325 kPa (1 atm)'],
-                    ['Standard temperature', '273 K (0°C)'],
-                    ['Planck constant (h)', '6.626 × 10⁻³⁴ J s'],
-                    ['Speed of light (c)', '3.00 × 10⁸ m s⁻¹'],
-                    ['Specific heat of water', '4.18 J g⁻¹ °C⁻¹'],
-                    ['Density of water', '1.00 g cm⁻³'],
-                    ['Ionic product of water (Kw)', '1.0 × 10⁻¹⁴ mol² L⁻² at 25°C']
+                    ['W.B. Yeats', 'Irish identity, aging, mythology', 'Symbolism, Irish references', 'Lake Isle, Easter 1916, Sailing to Byzantium'],
+                    ['Sylvia Plath', 'Identity, death, relationships', 'Confessional, vivid imagery', 'Mirror, Pheasant, Morning Song'],
+                    ['Seamus Heaney', 'Rural Ireland, memory, history', 'Sensory detail, earthy language', 'Digging, Mid-Term Break, Bogland'],
+                    ['Elizabeth Bishop', 'Loss, observation, travel', 'Precise description, understatement', 'The Fish, First Death in Nova Scotia'],
+                    ['Eavan Boland', 'Women, Irish history, suburbia', 'Personal and political', 'Child of Our Time, The War Horse'],
+                    ['Derek Mahon', 'Alienation, decay, observation', 'Detached, philosophical', 'A Disused Shed, Grandfather']
                 ],
-                note: 'These values are commonly given on the exam data sheet.'
+                note: 'Study at least 6-8 poems per poet. Know themes, techniques, and be able to compare poets.'
             },
-            indicators: {
-                title: 'Acid-Base Indicators',
-                headers: ['Indicator', 'pH Range', 'Acid Colour', 'Base Colour'],
+            comparative: {
+                title: 'Comparative Study - Modes of Comparison',
+                headers: ['Mode', 'Focus', 'Key Questions to Ask', 'Linking Words'],
                 data: [
-                    ['Methyl orange', '3.1 - 4.4', 'Red', 'Yellow'],
-                    ['Methyl red', '4.4 - 6.2', 'Red', 'Yellow'],
-                    ['Bromothymol blue', '6.0 - 7.6', 'Yellow', 'Blue'],
-                    ['Litmus', '5.0 - 8.0', 'Red', 'Blue'],
-                    ['Phenolphthalein', '8.2 - 10.0', 'Colourless', 'Pink'],
-                    ['Universal indicator', '1 - 14', 'Red/Orange', 'Blue/Purple']
+                    ['Theme/Issue', 'Shared themes across texts', 'How is [theme] explored? What attitudes?', 'Similarly, In contrast, Both texts'],
+                    ['Literary Genre', 'Genre conventions used', 'How do texts use/subvert conventions?', 'While X uses..., Y employs...'],
+                    ['General Vision', 'Optimistic/pessimistic outlook', 'Is the worldview hopeful or bleak?', 'The vision in X is..., whereas'],
+                    ['---', '---', '---', '---'],
+                    ['Key Requirement', 'Compare at minimum 3 texts', 'Novel + Play + Film (typical combo)', 'Links must be constant'],
+                    ['Structure Tip', 'P1: Introduce, P2-4: Body, P5: Conclude', 'Each paragraph links all 3 texts', 'Never analyse texts separately']
                 ],
-                note: 'Use methyl orange for strong acid/weak base. Use phenolphthalein for weak acid/strong base.'
+                note: 'Always name the mode in your introduction. Compare throughout - never write about texts in isolation.'
             }
         };
 
         function initDataTables() {
-            renderDataTable('electrochemical');
+            renderDataTable('examStructure');
             document.querySelectorAll('[data-table]').forEach(btn => {
                 btn.addEventListener('click', () => {
                     document.querySelectorAll('[data-table]').forEach(b => b.classList.remove('active'));
@@ -2309,52 +2414,53 @@
 
         // ==================== GLOSSARY ====================
         const glossaryTerms = [
-            { term: 'Atom', def: 'The smallest particle of an element that retains its chemical properties.', cat: 'atomic' },
-            { term: 'Atomic Number', def: 'The number of protons in the nucleus of an atom.', cat: 'atomic' },
-            { term: 'Mass Number', def: 'The total number of protons and neutrons in an atom.', cat: 'atomic' },
-            { term: 'Isotope', def: 'Atoms of the same element with different numbers of neutrons.', cat: 'atomic' },
-            { term: 'Ion', def: 'An atom or group of atoms with a net electric charge due to loss or gain of electrons.', cat: 'atomic' },
-            { term: 'Electron Configuration', def: 'The arrangement of electrons in an atom\'s orbitals.', cat: 'atomic' },
-            { term: 'Ground State', def: 'The lowest energy state of an atom where electrons occupy the lowest available energy levels.', cat: 'atomic' },
-            { term: 'Excited State', def: 'A state where an electron has absorbed energy and moved to a higher energy level.', cat: 'atomic' },
-            { term: 'Ionic Bond', def: 'A bond formed by the electrostatic attraction between oppositely charged ions.', cat: 'bonding' },
-            { term: 'Covalent Bond', def: 'A bond formed by the sharing of electron pairs between atoms.', cat: 'bonding' },
-            { term: 'Electronegativity', def: 'A measure of the ability of an atom to attract shared electrons in a covalent bond.', cat: 'bonding' },
-            { term: 'Polar Bond', def: 'A covalent bond where electrons are unequally shared due to different electronegativities.', cat: 'bonding' },
-            { term: 'Metallic Bond', def: 'Bonding in metals involving a lattice of positive ions surrounded by delocalised electrons.', cat: 'bonding' },
-            { term: 'Van der Waals Forces', def: 'Weak intermolecular forces caused by temporary dipoles.', cat: 'bonding' },
-            { term: 'Hydrogen Bond', def: 'A strong intermolecular force between H bonded to N, O, or F and a lone pair on another N, O, or F.', cat: 'bonding' },
-            { term: 'Alkane', def: 'A saturated hydrocarbon with only single C-C bonds. General formula: CₙH₂ₙ₊₂', cat: 'organic' },
-            { term: 'Alkene', def: 'An unsaturated hydrocarbon containing a C=C double bond. General formula: CₙH₂ₙ', cat: 'organic' },
-            { term: 'Functional Group', def: 'A group of atoms responsible for the characteristic reactions of a compound.', cat: 'organic' },
-            { term: 'Homologous Series', def: 'A family of compounds with the same functional group and general formula.', cat: 'organic' },
-            { term: 'Isomers', def: 'Compounds with the same molecular formula but different structural arrangements.', cat: 'organic' },
-            { term: 'Addition Reaction', def: 'A reaction where atoms are added across a multiple bond.', cat: 'organic' },
-            { term: 'Substitution Reaction', def: 'A reaction where one atom or group is replaced by another.', cat: 'organic' },
-            { term: 'Polymerisation', def: 'The process of joining many small monomer molecules to form a large polymer.', cat: 'organic' },
-            { term: 'Acid', def: 'A substance that donates protons (H⁺) or accepts electron pairs.', cat: 'acids' },
-            { term: 'Base', def: 'A substance that accepts protons (H⁺) or donates electron pairs.', cat: 'acids' },
-            { term: 'pH', def: 'A measure of hydrogen ion concentration: pH = -log₁₀[H⁺]', cat: 'acids' },
-            { term: 'Buffer Solution', def: 'A solution that resists changes in pH when small amounts of acid or base are added.', cat: 'acids' },
-            { term: 'Neutralisation', def: 'The reaction between an acid and a base to form salt and water.', cat: 'acids' },
-            { term: 'Titration', def: 'A technique to determine the concentration of a solution by reacting it with a solution of known concentration.', cat: 'acids' },
-            { term: 'Oxidation', def: 'Loss of electrons, gain of oxygen, or increase in oxidation state.', cat: 'redox' },
-            { term: 'Reduction', def: 'Gain of electrons, loss of oxygen, or decrease in oxidation state.', cat: 'redox' },
-            { term: 'Oxidising Agent', def: 'A substance that causes oxidation by accepting electrons (it gets reduced).', cat: 'redox' },
-            { term: 'Reducing Agent', def: 'A substance that causes reduction by donating electrons (it gets oxidised).', cat: 'redox' },
-            { term: 'Electrolysis', def: 'Using electrical energy to cause a non-spontaneous chemical reaction.', cat: 'redox' },
-            { term: 'Electrode', def: 'A conductor through which electricity enters or leaves an electrolyte.', cat: 'redox' },
-            { term: 'Anode', def: 'The electrode where oxidation occurs.', cat: 'redox' },
-            { term: 'Cathode', def: 'The electrode where reduction occurs.', cat: 'redox' },
-            { term: 'Mole', def: 'The amount of substance containing 6.022 × 10²³ particles.', cat: 'atomic' },
-            { term: 'Molar Mass', def: 'The mass of one mole of a substance, expressed in g/mol.', cat: 'atomic' },
-            { term: 'Enthalpy', def: 'The heat content of a system at constant pressure.', cat: 'redox' },
-            { term: 'Exothermic', def: 'A reaction that releases heat to the surroundings (ΔH < 0).', cat: 'redox' },
-            { term: 'Endothermic', def: 'A reaction that absorbs heat from the surroundings (ΔH > 0).', cat: 'redox' },
-            { term: 'Activation Energy', def: 'The minimum energy required for a reaction to occur.', cat: 'redox' },
-            { term: 'Catalyst', def: 'A substance that increases reaction rate without being consumed, by lowering activation energy.', cat: 'redox' },
-            { term: 'Equilibrium', def: 'A state where the rates of forward and reverse reactions are equal.', cat: 'redox' },
-            { term: 'Le Chatelier\'s Principle', def: 'When a system at equilibrium is disturbed, it shifts to counteract the change.', cat: 'redox' }
+            { term: 'Metaphor', def: 'A direct comparison between two things without using "like" or "as".', cat: 'poetry' },
+            { term: 'Simile', def: 'A comparison using "like" or "as".', cat: 'poetry' },
+            { term: 'Personification', def: 'Giving human qualities to non-human things.', cat: 'poetry' },
+            { term: 'Alliteration', def: 'Repetition of consonant sounds at the beginning of words.', cat: 'poetry' },
+            { term: 'Assonance', def: 'Repetition of vowel sounds within words.', cat: 'poetry' },
+            { term: 'Onomatopoeia', def: 'Words that imitate the sounds they describe.', cat: 'poetry' },
+            { term: 'Enjambment', def: 'When a sentence continues from one line to the next without punctuation.', cat: 'poetry' },
+            { term: 'Caesura', def: 'A pause in the middle of a line of poetry.', cat: 'poetry' },
+            { term: 'Volta', def: 'A turn or shift in thought or argument in a poem, especially in a sonnet.', cat: 'poetry' },
+            { term: 'Imagery', def: 'Descriptive language that appeals to the senses.', cat: 'poetry' },
+            { term: 'Soliloquy', def: 'A speech where a character speaks thoughts aloud, alone on stage.', cat: 'drama' },
+            { term: 'Aside', def: 'A remark heard by the audience but not by other characters.', cat: 'drama' },
+            { term: 'Dramatic Irony', def: 'When the audience knows something the characters do not.', cat: 'drama' },
+            { term: 'Tragic Hero', def: 'A protagonist of high status with a fatal flaw leading to their downfall.', cat: 'drama' },
+            { term: 'Hamartia', def: 'The fatal flaw or error in judgement of a tragic hero.', cat: 'drama' },
+            { term: 'Catharsis', def: 'The emotional release or purification experienced by the audience.', cat: 'drama' },
+            { term: 'Stage Directions', def: 'Instructions in a script about movement, tone, lighting, or setting.', cat: 'drama' },
+            { term: 'Subtext', def: 'The underlying meaning beneath the dialogue.', cat: 'drama' },
+            { term: 'Narrator', def: 'The voice telling the story.', cat: 'prose' },
+            { term: 'Unreliable Narrator', def: 'A narrator whose credibility is compromised or questionable.', cat: 'prose' },
+            { term: 'Stream of Consciousness', def: 'A narrative technique presenting a character\'s continuous flow of thoughts.', cat: 'prose' },
+            { term: 'Foreshadowing', def: 'Hints or clues about events that will happen later in the story.', cat: 'prose' },
+            { term: 'Flashback', def: 'A scene that interrupts the present to show past events.', cat: 'prose' },
+            { term: 'Motif', def: 'A recurring element (image, idea, symbol) that develops a theme.', cat: 'prose' },
+            { term: 'Characterisation', def: 'The methods used by a writer to develop and reveal characters.', cat: 'prose' },
+            { term: 'Pathetic Fallacy', def: 'When nature reflects or mirrors human emotions.', cat: 'prose' },
+            { term: 'Ethos', def: 'Persuasion through credibility and ethics of the speaker.', cat: 'rhetoric' },
+            { term: 'Pathos', def: 'Persuasion through emotional appeal.', cat: 'rhetoric' },
+            { term: 'Logos', def: 'Persuasion through logic and reasoning.', cat: 'rhetoric' },
+            { term: 'Rhetorical Question', def: 'A question asked for effect, not expecting an answer.', cat: 'rhetoric' },
+            { term: 'Anaphora', def: 'Repetition of a word or phrase at the beginning of successive clauses.', cat: 'rhetoric' },
+            { term: 'Hyperbole', def: 'Deliberate exaggeration for emphasis or effect.', cat: 'rhetoric' },
+            { term: 'Tricolon', def: 'Three parallel words, phrases, or clauses used together for effect.', cat: 'rhetoric' },
+            { term: 'Antithesis', def: 'Contrasting ideas in balanced phrases.', cat: 'rhetoric' },
+            { term: 'Tone', def: 'The writer\'s attitude towards the subject or audience.', cat: 'language' },
+            { term: 'Register', def: 'The level of formality in language (formal, informal, colloquial).', cat: 'language' },
+            { term: 'Diction', def: 'Word choice and vocabulary selection.', cat: 'language' },
+            { term: 'Syntax', def: 'Sentence structure and arrangement.', cat: 'language' },
+            { term: 'Irony', def: 'When meaning is opposite to what is literally said.', cat: 'language' },
+            { term: 'Euphemism', def: 'A mild word substituted for a harsh or unpleasant one.', cat: 'language' },
+            { term: 'Connotation', def: 'The implied meaning beyond the literal definition.', cat: 'language' },
+            { term: 'PEEL Structure', def: 'Point, Evidence, Explain, Link - a structure for analytical paragraphs.', cat: 'writing' },
+            { term: 'Thesis Statement', def: 'A sentence that expresses the main argument of an essay.', cat: 'writing' },
+            { term: 'Topic Sentence', def: 'The opening sentence of a paragraph that states the main idea.', cat: 'writing' },
+            { term: 'Comparative Mode', def: 'The lens through which texts are compared (Theme, Genre, or Vision).', cat: 'writing' },
+            { term: 'Close Reading', def: 'Careful analysis of language, structure, and effect in a text.', cat: 'writing' },
+            { term: 'Quotation Integration', def: 'Embedding quotes smoothly into your analysis.', cat: 'writing' }
         ].sort((a, b) => a.term.localeCompare(b.term));
 
         let currentGlossaryCategory = 'all';
