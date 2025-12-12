@@ -1207,140 +1207,178 @@
         };
 
         const topics = [
-            { id: 'atomic', icon: '⚛️', title: 'Atomic Structure', desc: 'Atoms, subatomic particles, electron configuration, isotopes', lessons: 8, questions: 45, progress: 0, content: '<h2>Atomic Structure</h2><h3>The Atom</h3><p>An atom is the smallest particle of an element that retains the chemical properties of that element. Atoms consist of three types of subatomic particles:</p><ul><li><strong>Protons</strong> - positively charged particles found in the nucleus</li><li><strong>Neutrons</strong> - neutral particles found in the nucleus</li><li><strong>Electrons</strong> - negatively charged particles orbiting the nucleus</li></ul><div class="key-point"><div class="key-point-title">Key Definition</div><p><strong>Atomic Number (Z)</strong> = Number of protons<br><strong>Mass Number (A)</strong> = Protons + Neutrons</p></div><h3>Isotopes</h3><p>Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons.</p><h3>Electron Configuration</h3><p>Electrons are arranged in energy levels (shells) around the nucleus. The maximum number of electrons in each shell is given by 2n².</p>' },
-            { id: 'bonding', icon: '🔗', title: 'Chemical Bonding', desc: 'Ionic, covalent, metallic bonding, electronegativity, shapes', lessons: 10, questions: 52, progress: 0, content: '<h2>Chemical Bonding</h2><h3>Ionic Bonding</h3><p>Ionic bonds form between metals and non-metals through the transfer of electrons.</p><div class="key-point"><div class="key-point-title">Properties of Ionic Compounds</div><ul><li>High melting and boiling points</li><li>Conduct electricity when molten or dissolved</li><li>Form crystalline lattice structures</li></ul></div><h3>Covalent Bonding</h3><p>Covalent bonds form between non-metals through the sharing of electron pairs.</p><h3>Electronegativity</h3><p>Electronegativity is the ability of an atom to attract shared electrons towards itself in a covalent bond.</p>' },
-            { id: 'stoichiometry', icon: '⚖️', title: 'Stoichiometry & The Mole', desc: 'Mole concept, calculations, limiting reagents, yields', lessons: 12, questions: 68, progress: 0, content: '<h2>Stoichiometry & The Mole</h2><h3>The Mole Concept</h3><p>The mole is the SI unit for amount of substance. One mole contains exactly 6.022 × 10²³ particles (Avogadro\'s number).</p><div class="key-point"><div class="key-point-title">Key Formulae</div><p>Number of moles (n) = mass (m) / molar mass (M)<br>Number of moles (n) = number of particles / 6.022 × 10²³<br>Number of moles (n) = volume (L) / 22.4 (at STP for gases)</p></div>' },
-            { id: 'organic', icon: '🧬', title: 'Organic Chemistry', desc: 'Hydrocarbons, functional groups, reactions, polymers', lessons: 15, questions: 85, progress: 0, content: '<h2>Organic Chemistry</h2><h3>Hydrocarbons</h3><div class="key-point"><div class="key-point-title">Homologous Series</div><ul><li><strong>Alkanes</strong> (CₙH₂ₙ₊₂): Single bonds only</li><li><strong>Alkenes</strong> (CₙH₂ₙ): Contains C=C double bond</li><li><strong>Alkynes</strong> (CₙH₂ₙ₋₂): Contains C≡C triple bond</li></ul></div><h3>Functional Groups</h3><ul><li><strong>Alcohols (-OH)</strong></li><li><strong>Aldehydes (-CHO)</strong></li><li><strong>Ketones (C=O)</strong></li><li><strong>Carboxylic acids (-COOH)</strong></li><li><strong>Esters (-COO-)</strong></li></ul>' },
-            { id: 'acids', icon: '🧫', title: 'Acids & Bases', desc: 'pH, neutralisation, titrations, buffer solutions', lessons: 9, questions: 55, progress: 0, content: '<h2>Acids & Bases</h2><div class="key-point"><div class="key-point-title">Brønsted-Lowry Definition</div><p><strong>Acid:</strong> Proton (H⁺) donor<br><strong>Base:</strong> Proton (H⁺) acceptor</p></div><h3>The pH Scale</h3><p>pH = -log₁₀[H⁺]</p><ul><li>pH < 7: Acidic</li><li>pH = 7: Neutral</li><li>pH > 7: Basic/alkaline</li></ul><h3>Neutralisation</h3><p>Acid + Base → Salt + Water</p>' },
-            { id: 'redox', icon: '🔋', title: 'Electrochemistry', desc: 'Oxidation, reduction, electrochemical cells, electrolysis', lessons: 11, questions: 48, progress: 0, content: '<h2>Electrochemistry</h2><div class="key-point"><div class="key-point-title">Remember: OIL RIG</div><p><strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss (of electrons)<br><strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain (of electrons)</p></div><h3>Electrolysis</h3><p>Electrolysis uses electrical energy to drive a non-spontaneous reaction.</p><ul><li>Oxidation occurs at the anode (positive)</li><li>Reduction occurs at the cathode (negative)</li></ul>' },
-            { id: 'rates', icon: '⏱️', title: 'Rates & Equilibrium', desc: 'Reaction rates, factors affecting rate, Le Chatelier', lessons: 10, questions: 42, progress: 0, content: '<h2>Rates of Reaction & Equilibrium</h2><h3>Factors Affecting Rate</h3><ol><li><strong>Temperature:</strong> Higher = faster</li><li><strong>Concentration:</strong> Higher = faster</li><li><strong>Surface area:</strong> Greater = faster</li><li><strong>Catalyst:</strong> Provides alternative pathway</li><li><strong>Pressure:</strong> (for gases) Higher = faster</li></ol><div class="key-point"><div class="key-point-title">Le Chatelier\'s Principle</div><p>When a system at equilibrium is disturbed, it will shift to counteract the change.</p></div>' },
-            { id: 'gases', icon: '💨', title: 'Gases', desc: 'Gas laws, ideal gas equation, kinetic theory', lessons: 7, questions: 38, progress: 0, content: '<h2>Gases</h2><div class="key-point"><div class="key-point-title">Ideal Gas Equation</div><p><strong>PV = nRT</strong></p><ul><li>P = Pressure</li><li>V = Volume</li><li>n = Moles</li><li>R = Gas constant (8.314 J/mol·K)</li><li>T = Temperature (Kelvin)</li></ul></div><p>At STP (0°C, 1 atm), one mole of any ideal gas occupies 22.4 L</p>' },
-            { id: 'thermo', icon: '🔥', title: 'Thermochemistry', desc: 'Enthalpy, Hess\'s law, bond energies, calorimetry', lessons: 8, questions: 40, progress: 0, content: '<h2>Thermochemistry</h2><div class="key-point"><div class="key-point-title">Exothermic vs Endothermic</div><p><strong>Exothermic (ΔH < 0):</strong> Heat released<br><strong>Endothermic (ΔH > 0):</strong> Heat absorbed</p></div><h3>Heat Energy</h3><p><strong>q = mcΔT</strong></p><ul><li>q = heat energy (J)</li><li>m = mass (g)</li><li>c = specific heat capacity</li><li>ΔT = temperature change</li></ul>' },
-            { id: 'environmental', icon: '🌍', title: 'Environmental Chemistry', desc: 'Water treatment, atmosphere, pollution, green chemistry', lessons: 6, questions: 32, progress: 0, content: '<h2>Environmental Chemistry</h2><h3>Water Treatment</h3><ol><li>Screening</li><li>Settling/Sedimentation</li><li>Filtration</li><li>Chlorination</li><li>Fluoridation</li><li>pH adjustment</li></ol><h3>Pollution</h3><ul><li><strong>Acid rain:</strong> Caused by SO₂ and NOₓ</li><li><strong>Greenhouse effect:</strong> CO₂, CH₄, N₂O</li><li><strong>Ozone depletion:</strong> CFCs</li></ul>' }
+            { id: 'poetry', icon: '📝', title: 'Poetry', desc: 'Prescribed poets, poetry techniques, analysis skills', lessons: 15, questions: 60, progress: 0, content: '<h2>Poetry</h2><h3>Prescribed Poets</h3><p>Study of selected poems from prescribed poets on the LC syllabus, including Yeats, Plath, Heaney, Bishop, Boland, and others.</p><div class="key-point"><div class="key-point-title">Poetry Analysis</div><ul><li>Theme and subject matter</li><li>Imagery and symbolism</li><li>Tone and mood</li><li>Structure and form</li><li>Language techniques</li></ul></div>' },
+            { id: 'shakespeare', icon: '🎭', title: 'Shakespeare', desc: 'Hamlet, Macbeth, King Lear, Othello - themes, characters', lessons: 12, questions: 55, progress: 0, content: '<h2>Shakespeare</h2><h3>Prescribed Plays</h3><p>In-depth study of your prescribed Shakespeare play, examining themes, characters, dramatic techniques, and language.</p><div class="key-point"><div class="key-point-title">Key Areas</div><ul><li>Tragic hero and fatal flaw</li><li>Soliloquies and asides</li><li>Imagery and motifs</li><li>Character development</li><li>Historical context</li></ul></div>' },
+            { id: 'comparative', icon: '📚', title: 'Comparative Study', desc: 'Comparing texts across themes, modes, literary genre', lessons: 14, questions: 48, progress: 0, content: '<h2>Comparative Study</h2><h3>Modes of Comparison</h3><div class="key-point"><div class="key-point-title">The Three Modes</div><ul><li><strong>Theme/Issue:</strong> Love, power, identity, family</li><li><strong>Literary Genre:</strong> How texts use genre conventions</li><li><strong>General Vision and Viewpoint:</strong> Optimistic, pessimistic, realistic</li></ul></div><p>Compare at least three texts (novel, play, film) exploring similarities and differences.</p>' },
+            { id: 'novel', icon: '📖', title: 'Single Text (Novel)', desc: 'Novel study - plot, character, theme, technique', lessons: 10, questions: 45, progress: 0, content: '<h2>Single Text - Novel</h2><h3>Novel Analysis</h3><p>Study your prescribed novel in detail, examining narrative techniques, characterisation, themes, and style.</p><div class="key-point"><div class="key-point-title">Key Elements</div><ul><li>Narrative voice and perspective</li><li>Plot structure</li><li>Characterisation</li><li>Setting and atmosphere</li><li>Themes and motifs</li></ul></div>' },
+            { id: 'comprehension', icon: '📄', title: 'Comprehension', desc: 'Reading comprehension strategies and techniques', lessons: 8, questions: 50, progress: 0, content: '<h2>Comprehension</h2><h3>Paper 1 Question A</h3><p>Develop skills for analysing unseen texts including visual, narrative, argumentative, and informative texts.</p><div class="key-point"><div class="key-point-title">Question Types</div><ul><li>Style and language analysis</li><li>Main idea identification</li><li>Inference and deduction</li><li>Visual text analysis</li></ul></div>' },
+            { id: 'composing', icon: '✍️', title: 'Composing', desc: 'Essays, speeches, articles, short stories, blogs', lessons: 12, questions: 40, progress: 0, content: '<h2>Composing</h2><h3>Paper 1 Question B</h3><div class="key-point"><div class="key-point-title">Composition Types</div><ul><li><strong>Personal Essay:</strong> Reflective, narrative</li><li><strong>Discursive Essay:</strong> Argumentative, opinion</li><li><strong>Short Story:</strong> Narrative, creative</li><li><strong>Speech:</strong> Persuasive, informative</li><li><strong>Article/Blog:</strong> Journalistic style</li></ul></div>' },
+            { id: 'language', icon: '🗣️', title: 'Language of Narration', desc: 'Narrative techniques, genre, aesthetic language', lessons: 8, questions: 38, progress: 0, content: '<h2>Language of Narration</h2><h3>Narrative Techniques</h3><ul><li><strong>First Person:</strong> I, we - intimate, limited</li><li><strong>Third Person Limited:</strong> He/she - focused perspective</li><li><strong>Third Person Omniscient:</strong> All-knowing narrator</li><li><strong>Unreliable Narrator:</strong> Questionable perspective</li></ul><div class="key-point"><div class="key-point-title">Aesthetic Language</div><p>How writers use language for artistic effect: imagery, symbolism, rhythm, sound devices.</p></div>' },
+            { id: 'persuasion', icon: '💬', title: 'Language of Argument', desc: 'Persuasive techniques, rhetoric, logical argument', lessons: 9, questions: 42, progress: 0, content: '<h2>Language of Argument</h2><h3>Persuasive Techniques</h3><div class="key-point"><div class="key-point-title">Rhetorical Appeals</div><ul><li><strong>Ethos:</strong> Credibility, ethics</li><li><strong>Pathos:</strong> Emotional appeal</li><li><strong>Logos:</strong> Logic, reasoning</li></ul></div><h3>Techniques</h3><ul><li>Rhetorical questions</li><li>Repetition and parallelism</li><li>Statistics and evidence</li><li>Anecdote and example</li></ul>' },
+            { id: 'information', icon: '📊', title: 'Language of Information', desc: 'Reports, instructions, information texts', lessons: 6, questions: 35, progress: 0, content: '<h2>Language of Information</h2><h3>Informative Texts</h3><p>Texts that aim to inform, explain, or instruct the reader.</p><div class="key-point"><div class="key-point-title">Features</div><ul><li>Clear, factual language</li><li>Logical organisation</li><li>Headings and subheadings</li><li>Visual aids (charts, diagrams)</li><li>Objective tone</li></ul></div>' },
+            { id: 'drama', icon: '🎪', title: 'Drama (Non-Shakespeare)', desc: 'Modern drama, dramatic techniques, staging', lessons: 10, questions: 40, progress: 0, content: '<h2>Drama</h2><h3>Modern Drama Study</h3><p>Study of prescribed drama texts exploring theatrical conventions and dramatic techniques.</p><div class="key-point"><div class="key-point-title">Dramatic Elements</div><ul><li>Stage directions</li><li>Dialogue and monologue</li><li>Dramatic irony</li><li>Tension and conflict</li><li>Themes and symbolism</li></ul></div>' }
         ];
 
         const flashcardsData = {
-            atomic: [
-                { q: "What is the atomic number?", a: "The number of protons in the nucleus of an atom" },
-                { q: "What is the mass number?", a: "The total number of protons and neutrons in the nucleus" },
-                { q: "What are isotopes?", a: "Atoms of the same element with different numbers of neutrons" },
-                { q: "What is electron configuration?", a: "The arrangement of electrons in energy levels and orbitals" },
-                { q: "State the Aufbau principle", a: "Electrons fill orbitals starting from the lowest energy level" },
-                { q: "What is Hund's rule?", a: "Electrons occupy orbitals singly before pairing up" },
-                { q: "What is the Pauli exclusion principle?", a: "No two electrons can have the same four quantum numbers" }
+            poetry: [
+                { q: "What is a metaphor?", a: "A direct comparison between two things without using 'like' or 'as'" },
+                { q: "What is a simile?", a: "A comparison using 'like' or 'as'" },
+                { q: "What is personification?", a: "Giving human qualities to non-human things" },
+                { q: "What is alliteration?", a: "Repetition of consonant sounds at the beginning of words" },
+                { q: "What is assonance?", a: "Repetition of vowel sounds within words" },
+                { q: "What is enjambment?", a: "When a sentence continues from one line to the next without punctuation" },
+                { q: "What is a volta?", a: "A turn or shift in thought or argument in a poem, especially in a sonnet" }
             ],
-            bonding: [
-                { q: "What is an ionic bond?", a: "A bond formed by the transfer of electrons from a metal to a non-metal" },
-                { q: "What is a covalent bond?", a: "A bond formed by the sharing of electrons between atoms" },
-                { q: "What is electronegativity?", a: "The ability of an atom to attract shared electrons in a covalent bond" },
-                { q: "What is a polar covalent bond?", a: "A covalent bond where electrons are unequally shared" },
-                { q: "What is metallic bonding?", a: "Bonding where positive ions are surrounded by delocalised electrons" },
-                { q: "What is a dative/coordinate bond?", a: "A covalent bond where both electrons come from the same atom" }
+            shakespeare: [
+                { q: "What is a tragic hero?", a: "A protagonist of high status with a fatal flaw that leads to their downfall" },
+                { q: "What is a soliloquy?", a: "A speech where a character speaks their thoughts aloud, alone on stage" },
+                { q: "What is dramatic irony?", a: "When the audience knows something the characters do not" },
+                { q: "What is iambic pentameter?", a: "A line of verse with five metrical feet, each with an unstressed then stressed syllable" },
+                { q: "What is hamartia?", a: "The fatal flaw or error in judgement of a tragic hero" },
+                { q: "What is an aside?", a: "A remark spoken by a character, heard by the audience but not other characters" }
             ],
-            stoichiometry: [
-                { q: "What is Avogadro's number?", a: "6.022 × 10²³ - the number of particles in one mole" },
-                { q: "What is the molar mass?", a: "The mass of one mole of a substance, in g/mol" },
-                { q: "How do you calculate moles from mass?", a: "n = m / M (mass divided by molar mass)" },
-                { q: "What is a limiting reagent?", a: "The reactant that is completely consumed first" },
-                { q: "How do you calculate percentage yield?", a: "(Actual yield / Theoretical yield) × 100%" },
-                { q: "What is the molar volume of a gas at STP?", a: "22.4 L/mol (at 0°C and 1 atm)" }
+            comparative: [
+                { q: "What is Theme/Issue mode?", a: "Comparing how texts explore the same theme (e.g., love, power, identity)" },
+                { q: "What is Literary Genre mode?", a: "Comparing how texts use and subvert genre conventions" },
+                { q: "What is General Vision and Viewpoint?", a: "Comparing the overall outlook - optimistic, pessimistic, or balanced" },
+                { q: "How many texts for comparative?", a: "At least three texts must be compared" },
+                { q: "What makes a good comparative point?", a: "A point that links texts with both similarities and differences supported by evidence" }
             ],
-            organic: [
-                { q: "What is the general formula for alkanes?", a: "CₙH₂ₙ₊₂" },
-                { q: "What is the general formula for alkenes?", a: "CₙH₂ₙ" },
-                { q: "What is the functional group in alcohols?", a: "Hydroxyl group (-OH)" },
-                { q: "What is the functional group in carboxylic acids?", a: "Carboxyl group (-COOH)" },
-                { q: "What type of reaction do alkenes undergo?", a: "Addition reactions (across the C=C double bond)" },
-                { q: "What is esterification?", a: "The reaction between an alcohol and carboxylic acid to form an ester and water" }
+            novel: [
+                { q: "What is first-person narration?", a: "Story told from 'I' perspective, limited to narrator's knowledge" },
+                { q: "What is third-person omniscient?", a: "An all-knowing narrator who can access all characters' thoughts" },
+                { q: "What is foreshadowing?", a: "Hints or clues about events that will happen later in the story" },
+                { q: "What is stream of consciousness?", a: "A narrative technique that presents a character's continuous flow of thoughts" },
+                { q: "What is a motif?", a: "A recurring element (image, idea, symbol) that develops a theme" },
+                { q: "What is characterisation?", a: "The methods used by a writer to develop and reveal characters" }
             ],
-            acids: [
-                { q: "What is the Brønsted-Lowry definition of an acid?", a: "A proton (H⁺) donor" },
-                { q: "What is the Brønsted-Lowry definition of a base?", a: "A proton (H⁺) acceptor" },
-                { q: "How is pH calculated?", a: "pH = -log₁₀[H⁺]" },
-                { q: "What is a strong acid?", a: "An acid that fully dissociates in water" },
-                { q: "What is neutralisation?", a: "The reaction between an acid and a base to form salt and water" }
+            comprehension: [
+                { q: "What is tone?", a: "The writer's attitude towards the subject or audience" },
+                { q: "What is inference?", a: "Reading between the lines to understand implied meaning" },
+                { q: "What is register?", a: "The level of formality in language (formal, informal, colloquial)" },
+                { q: "What should you comment on in visual texts?", a: "Composition, colour, facial expression, body language, text, camera angle" },
+                { q: "What is bias?", a: "A prejudice or one-sided view that influences the presentation of information" }
             ],
-            redox: [
-                { q: "What is oxidation?", a: "Loss of electrons (or gain of oxygen)" },
-                { q: "What is reduction?", a: "Gain of electrons (or loss of oxygen)" },
-                { q: "At which electrode does oxidation occur in electrolysis?", a: "At the anode (oxidation)" },
-                { q: "At which electrode does reduction occur in electrolysis?", a: "At the cathode (reduction)" },
-                { q: "What is Faraday's equation?", a: "Q = It (Charge = Current × Time)" }
+            composing: [
+                { q: "What makes a strong opening?", a: "A hook that engages the reader - a question, quote, anecdote, or striking image" },
+                { q: "What is PEEL structure?", a: "Point, Evidence, Explain, Link - a structure for paragraphs" },
+                { q: "What makes a good speech?", a: "Rhetorical devices, direct address, repetition, varied sentence structure" },
+                { q: "What is a discursive essay?", a: "An essay that presents arguments on both sides of an issue" },
+                { q: "What are key features of a personal essay?", a: "Reflective tone, first person, personal anecdotes, insight and growth" }
             ],
-            rates: [
-                { q: "What are five factors that affect reaction rate?", a: "Temperature, concentration, surface area, catalyst, pressure" },
-                { q: "What is activation energy?", a: "The minimum energy required for a reaction to occur" },
-                { q: "What is a catalyst?", a: "A substance that speeds up a reaction by providing an alternative pathway with lower activation energy" },
-                { q: "What is Le Chatelier's Principle?", a: "When equilibrium is disturbed, it shifts to counteract the change" },
-                { q: "What is dynamic equilibrium?", a: "When the rate of forward reaction equals the rate of reverse reaction" }
+            language: [
+                { q: "What is an unreliable narrator?", a: "A narrator whose credibility is compromised, whose account cannot be fully trusted" },
+                { q: "What is imagery?", a: "Descriptive language that appeals to the senses" },
+                { q: "What is symbolism?", a: "Using objects, characters, or colours to represent abstract ideas" },
+                { q: "What is atmosphere?", a: "The mood or feeling created by a writer through language and setting" },
+                { q: "What is flashback?", a: "A scene that interrupts the present to show past events" }
+            ],
+            persuasion: [
+                { q: "What is ethos?", a: "Persuasion through credibility and ethics of the speaker" },
+                { q: "What is pathos?", a: "Persuasion through emotional appeal" },
+                { q: "What is logos?", a: "Persuasion through logic and reasoning" },
+                { q: "What is a rhetorical question?", a: "A question asked for effect, not expecting an answer" },
+                { q: "What is anaphora?", a: "Repetition of a word or phrase at the beginning of successive clauses" },
+                { q: "What is hyperbole?", a: "Deliberate exaggeration for emphasis or effect" }
+            ],
+            information: [
+                { q: "What is objective writing?", a: "Writing that presents facts without personal opinion or bias" },
+                { q: "What are discourse markers?", a: "Words that organise and connect ideas (firstly, however, in conclusion)" },
+                { q: "What is technical language?", a: "Specialised vocabulary used in a particular field or subject" },
+                { q: "What is the purpose of headings?", a: "To organise content and help readers navigate the text" }
+            ],
+            drama: [
+                { q: "What are stage directions?", a: "Instructions in a script about movement, tone, lighting, or setting" },
+                { q: "What is dramatic tension?", a: "The sense of anticipation and uncertainty that keeps the audience engaged" },
+                { q: "What is a monologue?", a: "An extended speech by one character, may be heard by others on stage" },
+                { q: "What is subtext?", a: "The underlying meaning beneath the dialogue - what characters really mean" },
+                { q: "What is catharsis?", a: "The emotional release or purification experienced by the audience" }
             ]
         };
 
         const quizData = {
-            atomic: [
-                { q: "What particle has a positive charge?", options: ["Proton", "Neutron", "Electron", "Photon"], correct: 0, explanation: "Protons have a positive charge and are found in the nucleus." },
-                { q: "An atom with 17 protons and 18 neutrons has a mass number of:", options: ["17", "18", "35", "1"], correct: 2, explanation: "Mass number = protons + neutrons = 17 + 18 = 35" },
-                { q: "Isotopes have different numbers of:", options: ["Protons", "Electrons", "Neutrons", "All"], correct: 2, explanation: "Isotopes have the same protons but different neutrons." },
-                { q: "The electron configuration of Na (Z=11) is:", options: ["2,8", "2,8,1", "2,8,2", "1,8,2"], correct: 1, explanation: "Sodium has 11 electrons: 2 in first shell, 8 in second, 1 in third." }
+            poetry: [
+                { q: "'Her eyes were diamonds' is an example of:", options: ["Simile", "Metaphor", "Personification", "Alliteration"], correct: 1, explanation: "A metaphor makes a direct comparison without using 'like' or 'as'." },
+                { q: "What is the term for repeated consonant sounds at the start of words?", options: ["Assonance", "Alliteration", "Onomatopoeia", "Sibilance"], correct: 1, explanation: "Alliteration is the repetition of consonant sounds at the beginning of words." },
+                { q: "A sonnet traditionally has how many lines?", options: ["10", "12", "14", "16"], correct: 2, explanation: "A sonnet has 14 lines, typically in iambic pentameter." },
+                { q: "The 'turn' in a sonnet is called:", options: ["Caesura", "Volta", "Enjambment", "Couplet"], correct: 1, explanation: "The volta is the turn or shift in argument/thought in a sonnet." }
             ],
-            bonding: [
-                { q: "Ionic bonds typically form between:", options: ["Two metals", "Two non-metals", "A metal and non-metal", "Metalloids"], correct: 2, explanation: "Ionic bonds form when metals transfer electrons to non-metals." },
-                { q: "The shape of a water molecule is:", options: ["Linear", "Bent", "Tetrahedral", "Trigonal planar"], correct: 1, explanation: "Water has a bent shape due to two bonding pairs and two lone pairs." },
-                { q: "The most electronegative element is:", options: ["Oxygen", "Chlorine", "Fluorine", "Nitrogen"], correct: 2, explanation: "Fluorine has the highest electronegativity (3.98)." }
+            shakespeare: [
+                { q: "A speech alone on stage revealing thoughts is a:", options: ["Monologue", "Soliloquy", "Aside", "Prologue"], correct: 1, explanation: "A soliloquy is when a character speaks their thoughts aloud while alone on stage." },
+                { q: "The tragic hero's fatal flaw is called:", options: ["Catharsis", "Hamartia", "Hubris", "Anagnorisis"], correct: 1, explanation: "Hamartia is the fatal flaw or error that leads to the hero's downfall." },
+                { q: "When the audience knows something characters don't, it's:", options: ["Situational irony", "Verbal irony", "Dramatic irony", "Cosmic irony"], correct: 2, explanation: "Dramatic irony occurs when the audience has knowledge withheld from characters." },
+                { q: "How many syllables are in a line of iambic pentameter?", options: ["8", "10", "12", "14"], correct: 1, explanation: "Iambic pentameter has 5 feet of 2 syllables each = 10 syllables." }
             ],
-            stoichiometry: [
-                { q: "How many moles are in 36g of water (H₂O)?", options: ["1 mol", "2 mol", "18 mol", "0.5 mol"], correct: 1, explanation: "Molar mass of H₂O = 18 g/mol. n = 36/18 = 2 mol" },
-                { q: "At STP, what volume does 0.5 mol of gas occupy?", options: ["11.2 L", "22.4 L", "44.8 L", "5.6 L"], correct: 0, explanation: "At STP, 1 mol = 22.4 L, so 0.5 mol = 11.2 L" },
-                { q: "What is the molar mass of CaCO₃?", options: ["60 g/mol", "84 g/mol", "100 g/mol", "112 g/mol"], correct: 2, explanation: "M = 40 + 12 + 3(16) = 100 g/mol" }
+            comparative: [
+                { q: "How many texts must be compared in the Comparative Study?", options: ["Two", "Three or more", "Four", "Five"], correct: 1, explanation: "At least three texts must be compared in the Comparative Study." },
+                { q: "Which mode compares texts' optimistic or pessimistic outlooks?", options: ["Theme/Issue", "Literary Genre", "General Vision and Viewpoint", "Cultural Context"], correct: 2, explanation: "General Vision and Viewpoint examines the overall outlook of texts." },
+                { q: "A comparative essay should always:", options: ["Analyse texts separately", "Link texts throughout", "Focus on one text", "Avoid quotations"], correct: 1, explanation: "Comparative essays should consistently link and compare texts, not treat them separately." }
             ],
-            organic: [
-                { q: "Which is the correct formula for propane?", options: ["C₂H₆", "C₃H₆", "C₃H₈", "C₄H₈"], correct: 2, explanation: "Propane is an alkane: CₙH₂ₙ₊₂ = C₃H₈" },
-                { q: "What is produced when alcohol reacts with carboxylic acid?", options: ["Aldehyde", "Ketone", "Ester", "Ether"], correct: 2, explanation: "Alcohol + carboxylic acid → ester + water" },
-                { q: "Alkenes undergo which type of reaction with bromine?", options: ["Substitution", "Elimination", "Addition", "Condensation"], correct: 2, explanation: "Alkenes undergo addition reactions across the double bond." }
+            novel: [
+                { q: "A narrator who cannot be trusted is called:", options: ["Omniscient", "Limited", "Unreliable", "Objective"], correct: 2, explanation: "An unreliable narrator's account is questionable or biased." },
+                { q: "Hints about future events are called:", options: ["Flashback", "Foreshadowing", "Exposition", "Resolution"], correct: 1, explanation: "Foreshadowing gives hints or clues about what will happen later." },
+                { q: "A recurring image or idea that develops a theme is a:", options: ["Symbol", "Motif", "Metaphor", "Allegory"], correct: 1, explanation: "A motif is a recurring element that reinforces themes throughout a text." },
+                { q: "'Stream of consciousness' shows:", options: ["Dialogue", "Setting", "Inner thoughts flowing", "Flashbacks"], correct: 2, explanation: "Stream of consciousness presents a character's continuous flow of thoughts." }
             ],
-            acids: [
-                { q: "What is the pH of a solution with [H⁺] = 0.001 M?", options: ["1", "2", "3", "4"], correct: 2, explanation: "pH = -log₁₀(0.001) = 3" },
-                { q: "Which is a strong acid?", options: ["Ethanoic acid", "Carbonic acid", "Hydrochloric acid", "Citric acid"], correct: 2, explanation: "HCl is a strong acid that fully dissociates." },
-                { q: "What is formed when NaOH reacts with HCl?", options: ["NaCl + H₂O", "NaCl + H₂", "NaH + ClO", "Na + HClO"], correct: 0, explanation: "NaOH + HCl → NaCl + H₂O (neutralisation)" }
+            comprehension: [
+                { q: "Reading between the lines to find implied meaning is:", options: ["Skimming", "Scanning", "Inference", "Summary"], correct: 2, explanation: "Inference is deducing meaning that is implied but not directly stated." },
+                { q: "The writer's attitude towards the subject is called:", options: ["Style", "Tone", "Register", "Voice"], correct: 1, explanation: "Tone reflects the writer's attitude towards the subject or audience." },
+                { q: "The level of formality in language is called:", options: ["Tone", "Style", "Register", "Dialect"], correct: 2, explanation: "Register refers to the formality level (formal, informal, colloquial)." },
+                { q: "In visual texts, you should comment on:", options: ["Only the words", "Only the images", "Both words and visual elements", "Neither"], correct: 2, explanation: "Visual text analysis requires examining both textual and visual elements." }
             ],
-            redox: [
-                { q: "In Zn + Cu²⁺ → Zn²⁺ + Cu, zinc is:", options: ["Oxidised", "Reduced", "Neither", "Both"], correct: 0, explanation: "Zinc loses electrons (Zn → Zn²⁺ + 2e⁻), so it is oxidised." },
-                { q: "At which electrode does oxidation occur in electrolysis?", options: ["Cathode", "Anode", "Both", "Neither"], correct: 1, explanation: "Oxidation always occurs at the anode (AN OX)." },
-                { q: "What is the oxidation state of S in H₂SO₄?", options: ["+2", "+4", "+6", "-2"], correct: 2, explanation: "2(+1) + S + 4(-2) = 0, so S = +6" }
+            composing: [
+                { q: "PEEL stands for:", options: ["Point, Evidence, Explain, Link", "Paragraph, Example, Evaluate, List", "Purpose, Effect, Explore, Learn", "Point, Example, Elaborate, Limit"], correct: 0, explanation: "PEEL is Point, Evidence, Explain, Link - a paragraph structure." },
+                { q: "A personal essay should include:", options: ["Only facts", "Reflection and insight", "Formal language only", "Third person narration"], correct: 1, explanation: "Personal essays feature reflection, personal insight, and often first-person narration." },
+                { q: "What makes an effective speech opening?", options: ["Starting with 'Hello'", "A rhetorical question or striking statement", "Listing your points", "An apology"], correct: 1, explanation: "Effective speeches open with engaging hooks like rhetorical questions or powerful statements." }
             ],
-            rates: [
-                { q: "Increasing temperature increases rate because:", options: ["More energetic collisions", "Lower activation energy", "Better catalyst", "Equilibrium shifts"], correct: 0, explanation: "Higher temperature means faster particles with more kinetic energy." },
-                { q: "A catalyst works by:", options: ["Increasing temperature", "Providing alternative pathway", "Increasing concentration", "Shifting equilibrium"], correct: 1, explanation: "Catalysts provide an alternative pathway with lower activation energy." },
-                { q: "For an exothermic reaction, increasing temperature will:", options: ["Shift right", "Shift left", "No effect", "Stop reaction"], correct: 1, explanation: "By Le Chatelier's principle, heating favours the endothermic (reverse) direction." }
+            language: [
+                { q: "Language that appeals to the senses is:", options: ["Rhetoric", "Imagery", "Diction", "Syntax"], correct: 1, explanation: "Imagery is descriptive language that creates sensory experiences for the reader." },
+                { q: "Using an object to represent an abstract idea is:", options: ["Metaphor", "Symbolism", "Allegory", "Motif"], correct: 1, explanation: "Symbolism uses objects, colours, or characters to represent abstract ideas." },
+                { q: "A scene showing past events during the main narrative is:", options: ["Foreshadowing", "Flashback", "Exposition", "Prologue"], correct: 1, explanation: "A flashback interrupts the present narrative to show past events." }
+            ],
+            persuasion: [
+                { q: "Persuasion through credibility and ethics is:", options: ["Pathos", "Logos", "Ethos", "Kairos"], correct: 2, explanation: "Ethos persuades by establishing the speaker's credibility and ethical character." },
+                { q: "A question asked for effect, not expecting an answer:", options: ["Leading question", "Rhetorical question", "Loaded question", "Open question"], correct: 1, explanation: "Rhetorical questions are asked for effect, not to elicit an actual response." },
+                { q: "Repetition at the start of successive clauses is:", options: ["Epistrophe", "Anaphora", "Chiasmus", "Parallelism"], correct: 1, explanation: "Anaphora is the repetition of words at the beginning of successive clauses." },
+                { q: "Deliberate exaggeration for effect is:", options: ["Understatement", "Hyperbole", "Litotes", "Irony"], correct: 1, explanation: "Hyperbole is intentional exaggeration not meant to be taken literally." }
+            ],
+            information: [
+                { q: "Writing that presents facts without opinion is:", options: ["Subjective", "Objective", "Persuasive", "Narrative"], correct: 1, explanation: "Objective writing presents factual information without personal bias." },
+                { q: "Words like 'firstly', 'however', 'therefore' are:", options: ["Conjunctions", "Discourse markers", "Prepositions", "Interjections"], correct: 1, explanation: "Discourse markers organise and connect ideas in a text." }
+            ],
+            drama: [
+                { q: "Instructions about movement and setting in a script are:", options: ["Dialogue", "Monologue", "Stage directions", "Asides"], correct: 2, explanation: "Stage directions give instructions about staging, movement, and delivery." },
+                { q: "The emotional release experienced by the audience is:", options: ["Pathos", "Hamartia", "Catharsis", "Anagnorisis"], correct: 2, explanation: "Catharsis is the emotional purification or release felt by the audience." },
+                { q: "The underlying meaning beneath dialogue is:", options: ["Context", "Subtext", "Pretext", "Intertext"], correct: 1, explanation: "Subtext is the implied meaning beneath what characters actually say." }
             ]
         };
 
         const formulasData = [
-            { name: "Number of moles", equation: "n = m / M", desc: "Calculate moles from mass and molar mass", vars: "n = moles, m = mass (g), M = molar mass (g/mol)", category: "stoich" },
-            { name: "Concentration", equation: "C = n / V", desc: "Calculate molarity from moles and volume", vars: "C = concentration (M), n = moles, V = volume (L)", category: "stoich" },
-            { name: "Dilution", equation: "C₁V₁ = C₂V₂", desc: "Calculate dilution concentrations/volumes", vars: "C = concentration, V = volume", category: "stoich" },
-            { name: "Percentage Yield", equation: "% = (Actual / Theoretical) × 100", desc: "Calculate reaction efficiency", vars: "Actual = experimental, Theoretical = calculated", category: "stoich" },
-            { name: "Ideal Gas Equation", equation: "PV = nRT", desc: "Relates pressure, volume, moles and temperature", vars: "P = pressure, V = volume, n = moles, R = 8.314, T = temp (K)", category: "gas" },
-            { name: "Boyle's Law", equation: "P₁V₁ = P₂V₂", desc: "Pressure-volume at constant temperature", vars: "P = pressure, V = volume", category: "gas" },
-            { name: "Charles's Law", equation: "V₁/T₁ = V₂/T₂", desc: "Volume-temperature at constant pressure", vars: "V = volume, T = temperature (K)", category: "gas" },
-            { name: "pH", equation: "pH = -log₁₀[H⁺]", desc: "Calculate pH from hydrogen ion concentration", vars: "[H⁺] = hydrogen ion concentration (M)", category: "acids" },
-            { name: "pOH", equation: "pOH = -log₁₀[OH⁻]", desc: "Calculate pOH from hydroxide ion concentration", vars: "[OH⁻] = hydroxide ion concentration (M)", category: "acids" },
-            { name: "pH + pOH", equation: "pH + pOH = 14", desc: "Relationship at 25°C", vars: "At 25°C, pKw = 14", category: "acids" },
-            { name: "Heat Energy", equation: "q = mcΔT", desc: "Calculate heat in calorimetry", vars: "q = heat (J), m = mass (g), c = specific heat, ΔT = temp change", category: "thermo" },
-            { name: "Enthalpy of Reaction", equation: "ΔH = ΣΔHf(products) - ΣΔHf(reactants)", desc: "Using formation enthalpies", vars: "ΔHf = enthalpy of formation", category: "thermo" },
-            { name: "Faraday's Law", equation: "Q = It", desc: "Charge transferred in electrolysis", vars: "Q = charge (C), I = current (A), t = time (s)", category: "redox" },
-            { name: "Equilibrium Constant", equation: "Kc = [products]ᵖ / [reactants]ʳ", desc: "Equilibrium expression", vars: "Concentrations raised to stoichiometric coefficients", category: "rates" }
+            { name: "PEEL Paragraph", equation: "Point → Evidence → Explain → Link", desc: "Structure for analytical paragraphs", vars: "Make a point, support with evidence, explain significance, link to question", category: "writing" },
+            { name: "Rhetorical Triangle", equation: "Ethos + Pathos + Logos", desc: "Three modes of persuasion", vars: "Ethos (credibility), Pathos (emotion), Logos (logic)", category: "persuasion" },
+            { name: "Comparative Structure", equation: "Link → Compare → Contrast → Conclude", desc: "Structure for comparative paragraphs", vars: "Always link texts, find similarities and differences", category: "comparative" },
+            { name: "Poetry Analysis", equation: "Theme + Technique + Effect", desc: "Approach for poetry questions", vars: "What is said (theme), how it's said (technique), why (effect)", category: "poetry" },
+            { name: "Character Analysis", equation: "Trait + Evidence + Development", desc: "Analysing characters in texts", vars: "Identify trait, support with quotes, show change", category: "novel" },
+            { name: "Essay Introduction", equation: "Hook + Context + Thesis", desc: "Opening an essay effectively", vars: "Engage reader, set context, state your argument", category: "writing" },
+            { name: "Essay Conclusion", equation: "Summarise + Synthesise + Significance", desc: "Closing an essay effectively", vars: "Recap main points, bring together ideas, wider implications", category: "writing" },
+            { name: "Personal Essay", equation: "Reflect + Narrate + Insight", desc: "Structure for personal writing", vars: "Show reflection, tell story, reveal personal growth", category: "composing" },
+            { name: "Speech Structure", equation: "Hook + Body + Call to Action", desc: "Effective speech organisation", vars: "Grab attention, develop argument, inspire action", category: "composing" },
+            { name: "Comprehension Approach", equation: "Read + Identify + Analyse + Quote", desc: "Answering comprehension questions", vars: "Read carefully, identify features, analyse effect, use evidence", category: "comprehension" },
+            { name: "Visual Text Analysis", equation: "Image + Text + Context + Effect", desc: "Analysing visual media", vars: "Examine visuals, read accompanying text, consider context, discuss impact", category: "comprehension" },
+            { name: "Drama Analysis", equation: "Conflict + Character + Theme + Staging", desc: "Analysing dramatic texts", vars: "Central conflict, character motivations, themes, performance elements", category: "drama" },
+            { name: "Quote Integration", equation: "Introduce + Quote + Analyse", desc: "Using quotations effectively", vars: "Set up the quote, insert quote, explain its significance", category: "writing" },
+            { name: "Tone Analysis", equation: "Word Choice + Sentence Structure + Effect", desc: "Identifying and analysing tone", vars: "Examine diction, look at syntax, explain impact on reader", category: "language" }
         ];
 
         const experimentsData = [
-            { id: 1, title: "Flame Tests", badge: "Inorganic", icon: "🔥", desc: "Identify metal ions by flame colour" },
-            { id: 2, title: "Titration (Acid-Base)", badge: "Quantitative", icon: "🧪", desc: "Determine concentration by neutralisation" },
-            { id: 3, title: "Rate of Reaction", badge: "Kinetics", icon: "⏱️", desc: "Measure effect of concentration on rate" },
-            { id: 4, title: "Preparation of Ethene", badge: "Organic", icon: "🧬", desc: "Dehydration of ethanol" },
-            { id: 5, title: "Esterification", badge: "Organic", icon: "🍎", desc: "Prepare an ester from alcohol and acid" },
-            { id: 6, title: "Electrolysis of Water", badge: "Electrochemistry", icon: "⚡", desc: "Decompose water into H₂ and O₂" },
-            { id: 7, title: "Heat of Reaction", badge: "Thermochemistry", icon: "🌡️", desc: "Measure enthalpy of neutralisation" },
-            { id: 8, title: "Tests for Anions", badge: "Analytical", icon: "🔬", desc: "Identify carbonate, sulfate, chloride" }
+            { id: 1, title: "Poetry Close Reading", badge: "Poetry", icon: "📝", desc: "Analyse a poem using SMILE technique" },
+            { id: 2, title: "Essay Planning", badge: "Writing", icon: "📋", desc: "Plan and structure an essay response" },
+            { id: 3, title: "Comparative Analysis", badge: "Comparative", icon: "📚", desc: "Compare themes across three texts" },
+            { id: 4, title: "Speech Writing", badge: "Composing", icon: "🎤", desc: "Craft a persuasive speech" },
+            { id: 5, title: "Character Study", badge: "Novel/Drama", icon: "👤", desc: "Analyse a character's development" },
+            { id: 6, title: "Visual Text Analysis", badge: "Comprehension", icon: "🖼️", desc: "Analyse images and visual media" },
+            { id: 7, title: "Dramatic Performance", badge: "Shakespeare", icon: "🎭", desc: "Read and interpret a key scene" },
+            { id: 8, title: "Creative Writing", badge: "Composing", icon: "✍️", desc: "Write a short story or personal essay" }
         ];
 
         // ==================== STATE ====================
