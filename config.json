@@ -1,0 +1,60 @@
+{
+  "name": "EnglishMaster LC",
+  "full_name": "Irish Leaving Cert English",
+  "emoji": "\ud83d\udcd6",
+  "colors": {
+    "primary": "#8b5cf6",
+    "secondary": "#7c3aed",
+    "accent": "#a78bfa"
+  },
+  "topics": [
+    {
+      "id": "comprehension",
+      "icon": "\ud83d\udcc4",
+      "title": "Comprehension",
+      "desc": "Reading skills, analysis, unseen texts, Paper 1"
+    },
+    {
+      "id": "composition",
+      "icon": "\u270d\ufe0f",
+      "title": "Composition",
+      "desc": "Essays, articles, speeches, personal writing"
+    },
+    {
+      "id": "poetry",
+      "icon": "\ud83d\udcdd",
+      "title": "Poetry",
+      "desc": "Prescribed poems, themes, techniques, analysis"
+    },
+    {
+      "id": "drama",
+      "icon": "\ud83c\udfad",
+      "title": "Drama",
+      "desc": "Shakespeare, modern drama, character, themes"
+    },
+    {
+      "id": "fiction",
+      "icon": "\ud83d\udcda",
+      "title": "Fiction",
+      "desc": "Novels, short stories, narrative techniques"
+    },
+    {
+      "id": "film",
+      "icon": "\ud83c\udfac",
+      "title": "Film Study",
+      "desc": "Comparative study, techniques, themes, analysis"
+    },
+    {
+      "id": "grammar",
+      "icon": "\ud83d\udcd6",
+      "title": "Grammar",
+      "desc": "Syntax, punctuation, language conventions"
+    },
+    {
+      "id": "examskills",
+      "icon": "\ud83c\udfaf",
+      "title": "Exam Skills",
+      "desc": "Time management, structure, marks allocation"
+    }
+  ]
+}
